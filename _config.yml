@@ -10,10 +10,10 @@
 ############################
 
 # Name of website
-title: My website
+title: The Success of Inclusive Cinema
 
 # Your name to show in the footer
-author: Some Person
+author: Inspiration Team
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -22,9 +22,7 @@ author: Some Person
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+    - The Dataset: "https://www.cs.cmu.edu/~ark/personas/"
 
 ################
 # --- Logo --- #
