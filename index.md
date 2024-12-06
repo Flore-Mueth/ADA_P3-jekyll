@@ -2,7 +2,7 @@
 layout: page
 title: The Success of Inclusive Cinema
 subtitle: Exploring the Connection Between Representation and Movie Triumph
-cover-img: /assets/img/temp_image_div_2.png
+cover-img: /assets/img/temp_image_div_3.png
 ---
 
 ## Introduction
