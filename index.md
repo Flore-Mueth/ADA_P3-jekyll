@@ -7,11 +7,11 @@ cover-img: /assets/img/temp_image_div_2.png
 
 ## Introduction
 
-Movies don’t just entertain—they inspire and shape how we see the world. A little girl watching a character like her become a doctor might suddenly believe she can do the same. Cinema reflects our emotions and dreams, and in doing so, it helps shape our collective imagination.
+Movies don't just entertain—they inspire and shape how we see the world. A little girl watching a character like her become a doctor might suddenly believe she can do the same. Cinema reflects our emotions and dreams, and in doing so, it helps shape our collective imagination.
 
 Yet, this incredible influence comes with responsibility. Films can perpetuate harmful stereotypes or amplify fear and prejudice. Worse, a lack of representation leaves entire communities invisible, excluded from the collective narrative. Thankfully, awareness of this issue has grown over the past few decades, leading to slow but meaningful progress in diversifying casts.
 
-Today, even the Oscars have introduced diversity quotas for Best Picture eligibility, recognizing the importance of representation in storytelling. But beyond quotas and moral imperatives, there's a compelling question: can a diverse cast also drive cinematic success? Could the power of representation become a key motivator for filmmakers to embrace inclusivity? Let’s dive into a data story to uncover the impact of diversity on movie success.
+Today, even the Oscars have introduced diversity quotas for Best Picture eligibility, recognizing the importance of representation in storytelling. But beyond quotas and moral imperatives, there's a compelling question: can a diverse cast also drive cinematic success? Could the power of representation become a key motivator for filmmakers to embrace inclusivity? Let's dive into a data story to uncover the impact of diversity on movie success.
 
 ## Setting the Stage: What We're Exploring and How
 
@@ -34,7 +34,7 @@ To enrich our analysis, we brought in additional datasets:
 
 ### What We'll Explore
 
-We’ll tackle some big questions about how cast diversity influences both financial and critical success:
+We'll tackle some big questions about how cast diversity influences both financial and critical success:
 
 Financial Success:
 
@@ -46,7 +46,7 @@ Critical and Audience Reception:
 - Are films with diverse casts more likely to receive award nominations?
 - Do they earn higher audience and critic ratings?
 
-(Through data-driven storytelling and interactive visualizations, we aim to uncover patterns, challenge assumptions, and inspire new perspectives. Ready to explore the power of representation in cinema? Let’s dive in!)
+(Through data-driven storytelling and interactive visualizations, we aim to uncover patterns, challenge assumptions, and inspire new perspectives. Ready to explore the power of representation in cinema? Let's dive in!)
 
 ## What Makes a Cast Inclusive?
 
