@@ -50,8 +50,20 @@ Critical and Audience Reception:
 
 ## What Makes a Cast Inclusive?
 
+### Clustering the ethnicities (plot camember)
+
+### Diversity score (histogram x:score, y:nb of movie / over time...)
+
 ## How to Measure the Success of a Movie?
 
-## The Impact of a Diverse Cast on Success
+### Succes Score, price, box office, public
+
+### Set threshold (explore diff th)
+
+## The Cruel Truth
+
+### Linear Regression
+
+### 
 
 
