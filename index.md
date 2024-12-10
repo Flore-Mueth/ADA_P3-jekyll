@@ -19,12 +19,23 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
 
 ### About the Data
 
-Our primary dataset provides key elements such as:
-
-- Movie Name
-- Release Year
-- Actor Ethnicity
-- Box Office Revenue
+<div style="display: flex; align-items: center; justify-content: center;">
+    <!-- Left Side: Image -->
+    <div style="margin-right: 20px;">
+        <img src="assets/img/video_camera.png" alt="" style="max-width: 150px; height: auto;">
+    </div>
+    
+    <!-- Right Side: Text -->
+    <div>
+        <h2>Our primary dataset provides key elements such as:</h2>
+        <ul>
+            <li>Movie Name</li>
+            <li>Release Year</li>
+            <li>Actor Ethnicity</li>
+            <li>Box Office Revenue</li>
+        </ul>
+    </div>
+</div>
 
 To enrich our analysis, we brought in additional datasets:
 
