@@ -27,7 +27,7 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
     
     <!-- Right Side: Text -->
     <div>
-        <h3>Our primary dataset provides key elements such as:</h3>
+        <h4>Our primary dataset provides key elements such as:</h4>
         <ul>
             <li>Movie Name</li>
             <li>Release Year</li>
@@ -40,7 +40,7 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
 <div style="display: flex; align-items: center; justify-content: center;">
     <!-- Left Side: Text -->
     <div style="margin-right: 20px;">
-        <h3>To enrich our analysis, we brought in additional datasets:</h3>
+        <h4>To enrich our analysis, we brought in additional datasets:</h4>
         <ul>
             <li>IMDb datasets for movie titles and user ratings on a 0-10 scale.</li>
             <li>Award data from globally recognized institutions like the Oscars, Golden Globes, Filmfare, and others.</li>
@@ -56,25 +56,49 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
 
 ### What We'll Explore
 
-We'll tackle some big questions about how cast diversity influences both financial and critical success:
-
-Financial Success:
+We will tackle some big questions about how cast diversity influences both financial and critical success:
 
 - Does cast diversity impact box office performance?
-- How does this effect vary across genres and budgets?
-
-Critical and Audience Reception:
-
 - Are films with diverse casts more likely to receive award nominations?
 - Do they earn higher audience and critic ratings?
 
-(Through data-driven storytelling and interactive visualizations, we aim to uncover patterns, challenge assumptions, and inspire new perspectives. Ready to explore the power of representation in cinema? Let's dive in!)
-
 ## What Makes a Cast Inclusive?
 
-### Clustering the ethnicities (plot camember)
+<p align="center">
+<img src="assets/img/Intouchable.gif" alt=""/>
+</p>
 
-### Diversity score (histogram x:score, y:nb of movie / over time...)
+### Clustering the ethnicities
+
+When we first have a look at the ethnicities, we can see that there are a total of more than 350 different ethnicities, some of them still very similar (e.g. 'Austrian American' and 'Austrian Canadian' etc). We want to first simplify this ethnicity criterion before defining diversity. If we didn’t sort the ethnicities, a film with a cast of a German, Austrian and Swiss would be considered very diverse. This is however not what we want to consider diverse. It is for this reason that the ethnicities were first grouped into larger ethnic groups. This was done with the help of a Large Language Model (LLM), with checks and corrections done by hand. Doing this by hand was still possible thanks to the manageable number of ethnicities and the LLM doing the most time-consuming part.
+
+<div style="display: flex; align-items: center; justify-content: center;">
+    <!-- Left Side: Image -->
+    <div style="margin-right: 20px;">
+        <img src="assets/img/camembert1.png" alt="" style="max-width: 150px; height: auto;">
+    </div>
+    
+    <!-- Right Side: Image -->
+    <div>
+        <img src="assets/img/camembert2.png" alt="" style="max-width: 150px; height: auto;">
+    </div>
+</div>
+
+
+### Diversity score
+
+Once ethnicities have been categorized into larger groups (16 in total), we can begin defining diversity. Since the focus is on the diversity of the cast rather than the representation of minority groups, the country of production does not need to be taken into account.
+
+A straightforward way to calculate diversity is to divide the number of ethnicities represented by the number of actors in the cast. However, this method is limited. For instance, in a movie with nine actors and three ethnicities, this approach would assign the same diversity score to a distribution of ethnicities such as (3,3,3) and (1,1,7).
+To refine this measure, we incorporate the concept of entropy. Entropy accounts for the distribution of ethnicities within a cast. The basic formula for entropy is:
+
+<p>S = &Sigma; p<sub>i</sub> &middot; ln(p<sub>i</sub>)</p>
+where p<sub>i represents the proportion of the cast belonging to a particular ethnicity.
+
+To avoid obtaining a value of zero when all actors belong to a single ethnicity, we add 1 to the entropy calculation. This ensures a more meaningful result when combining this measure with our initial diversity definition.
+Finally, to balance the limitations of both methods, we multiply the entropy value by the initial diversity measure. This final diversity coefficient better captures the nuances of cast diversity, penalizing films with fewer actors while rewarding those with a more even distribution of ethnicities.
+
+Plot diversity over time + comments
 
 ## How to Measure the Success of a Movie?
 
