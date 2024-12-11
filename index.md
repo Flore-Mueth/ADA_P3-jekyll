@@ -14,7 +14,7 @@ Yet, this incredible influence comes with responsibility. Films can perpetuate h
 Today, even the Oscars have introduced diversity quotas for Best Picture eligibility, recognizing the importance of representation in storytelling. But beyond quotas and moral imperatives, there's a compelling question: can a diverse cast also drive cinematic success? Could the power of representation become a key motivator for filmmakers to embrace inclusivity? Let's dive into a data story to uncover the impact of diversity on movie success. 
 
 <p align="center">
-<img src="assets/img/great_success.jpg" alt=""/>
+    <img src="assets/img/great_success.jpg" alt="" width="500"/> <!-- Adjust width as needed -->
 </p>
 
 ## Setting the Stage: What We're Exploring and How
@@ -23,7 +23,10 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
 
 ### About Our Inspiring Datasets
 
-<div style="display: flex; align-items: center; justify-content: center;">
+<div style="margin-bottom: 40px;"> <!-- Adjust the bottom margin for spacing -->
+</div>
+
+<div style="display: flex; align-items: center; justify-content: center; margin-top: 40px;"> <!-- Adjust margin-top as needed -->
     <!-- Left Side: Image -->
     <div style="margin-right: 20px;">
         <img src="assets/img/video_camera.png" alt="" style="max-width: 150px; height: auto;">
@@ -41,8 +44,7 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
     </div>
 </div>
 
-
-<div style="display: flex; align-items: center; justify-content: center;">
+<div style="display: flex; align-items: center; justify-content: center; margin-top: 40px;"> <!-- Adjust margin-top for this section -->
     <!-- Left Side: Text -->
     <div style="margin-right: 20px;">
         <h6>To enrich our analysis, we brought in additional datasets:</h6>
@@ -91,10 +93,8 @@ Once ethnicities have been categorized into larger groups (16 in total), we can 
 
 A straightforward way to calculate diversity is to divide the number of ethnicities represented by the number of actors in the cast. However, this method is limited. For instance, in a movie with nine actors and three ethnicities, this approach would assign the same diversity score to a distribution of ethnicities such as (3,3,3) and (1,1,7).
 To refine this measure, we incorporate the concept of entropy. Entropy accounts for the distribution of ethnicities within a cast. The basic formula for entropy is:
-
-<p>The formula for entropy is: <em>S = Σ p<sub>i</sub> · ln(p<sub>i</sub>)</em>, 
+<p><em>S = Σ p<sub>i</sub> · ln(p<sub>i</sub>)</em>, 
 where <em>p<sub>i</sub></em> represents the proportion of the cast belonging to a particular ethnicity.</p>
-
 To avoid obtaining a value of zero when all actors belong to a single ethnicity, we add 1 to the entropy calculation. This ensures a more meaningful result when combining this measure with our initial diversity definition.
 Finally, to balance the limitations of both methods, we multiply the entropy value by the initial diversity measure. This final diversity coefficient better captures the nuances of cast diversity, penalizing films with fewer actors while rewarding those with a more even distribution of ethnicities.
 
@@ -116,6 +116,10 @@ Secondly, the diversity coefficient relies on the previously defined ethnic grou
 
 ### Linear Regression
 
-### 
+### Propensity Score
+
+## Conclusion 
+
+## References
 
 
