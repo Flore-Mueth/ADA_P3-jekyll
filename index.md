@@ -11,13 +11,17 @@ Movies don't just entertain—they inspire and shape how we see the world. A lit
 
 Yet, this incredible influence comes with responsibility. Films can perpetuate harmful stereotypes or amplify fear and prejudice. Worse, a lack of representation leaves entire communities invisible, excluded from the collective narrative. Thankfully, awareness of this issue has grown over the past few decades, leading to slow but meaningful progress in diversifying casts.
 
-Today, even the Oscars have introduced diversity quotas for Best Picture eligibility, recognizing the importance of representation in storytelling. But beyond quotas and moral imperatives, there's a compelling question: can a diverse cast also drive cinematic success? Could the power of representation become a key motivator for filmmakers to embrace inclusivity? Let's dive into a data story to uncover the impact of diversity on movie success.
+Today, even the Oscars have introduced diversity quotas for Best Picture eligibility, recognizing the importance of representation in storytelling. But beyond quotas and moral imperatives, there's a compelling question: can a diverse cast also drive cinematic success? Could the power of representation become a key motivator for filmmakers to embrace inclusivity? Let's dive into a data story to uncover the impact of diversity on movie success. 
+
+<p align="center">
+<img src="assets/img/great_success.jpg" alt=""/>
+</p>
 
 ## Setting the Stage: What We're Exploring and How
 
 In this project, we will dive into the provided CMU Movie Summary Corpus Dataset containing 42,306 plot summaries and metadata for films released from 1893 to 2013. To define "success," we have expanded our resources, integrating data on award nominations and audience ratings.
 
-### About the Data
+### About Our Inspiring Datasets
 
 <div style="display: flex; align-items: center; justify-content: center;">
     <!-- Left Side: Image -->
@@ -36,6 +40,7 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
         </ul>
     </div>
 </div>
+
 
 <div style="display: flex; align-items: center; justify-content: center;">
     <!-- Left Side: Text -->
@@ -56,18 +61,7 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
 
 ### What We'll Explore
 
-In this project, we aim to address some significant questions about how cast diversity influences both financial and critical success in the film industry:
-
-###### Does cast diversity impact box office performance?
-To explore this, we will analyze the relationship between cast diversity and box office revenue using methods like linear regression analysis to identify trends and correlations. We will also account for other influencing factors such as movie running time and release year to isolate the effect of diversity.
-
-###### Are films with diverse casts more likely to receive award nominations?
-By leveraging data on prestigious awards such as the Oscars, Golden Globes, and other internationally recognized accolades, we will employ propensity score matching. This method allows us to compare films with similar characteristics, except for their cast diversity, to determine whether diversity correlates with a higher likelihood of earning nominations.
-
-###### Do films with diverse casts earn higher critic ratings?
-Using IMDb user ratings and critical reviews, we will examine whether diversity in casts influences public and professional evaluations. Through techniques like logistic regression and statistical tests, we aim to uncover patterns that highlight the impact of representation on reception.
-
-By applying these robust analytical methods, we will delve deeper into the data to uncover insights about how diversity shapes a film's financial success and critical acclaim.
+In this project, we set out to uncover how cast diversity influences both the financial and critical success of films—and the results might surprise you. Does diversity impact box office performance? To find out, we will dive into the data using linear regression to pinpoint trends while accounting for factors like movie length and release year. But the intrigue does not stop at ticket sales—what about awards? Are films with more diverse casts more likely to snag nominations for prestigious accolades like the Oscars or Golden Globes? With a little help from propensity score matching, we can compare similar films and see if diversity tips the scales or not... Lastly, let’s not forget the critics and audiences, do movies with diverse casts get higher ratings on IMDb? Through logistic regression and statistical analysis, we aim to decode these patterns. Armed with these analytical tools, we are ready to explore how representation is not always a recipe for success. The data reveals a more complex story, and we are here to share it with you.
 
 ## What Makes a Cast Inclusive?
 
