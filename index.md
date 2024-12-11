@@ -27,7 +27,7 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
     
     <!-- Right Side: Text -->
     <div>
-        <h2>Our primary dataset provides key elements such as:</h2>
+        <h3>Our primary dataset provides key elements such as:</h3>
         <ul>
             <li>Movie Name</li>
             <li>Release Year</li>
@@ -37,11 +37,22 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
     </div>
 </div>
 
-To enrich our analysis, we brought in additional datasets:
-
-- IMDb datasets for movie titles and user ratings on a 0-10 scale.
-- Award data from globally recognized institutions like the Oscars, Golden Globes, Filmfare, and others.
-- A mapping dataset linking Freebase IDs to Wikidata, enabling deeper insights.
+<div style="display: flex; align-items: center; justify-content: center;">
+    <!-- Left Side: Text -->
+    <div style="margin-right: 20px;">
+        <h3>To enrich our analysis, we brought in additional datasets:</h3>
+        <ul>
+            <li>IMDb datasets for movie titles and user ratings on a 0-10 scale.</li>
+            <li>Award data from globally recognized institutions like the Oscars, Golden Globes, Filmfare, and others.</li>
+            <li>A mapping dataset linking Freebase IDs to Wikidata, enabling deeper insights.</li>
+        </ul>
+    </div>
+    
+    <!-- Right Side: Image -->
+    <div>
+        <img src="assets/img/oscar.png" alt="" style="max-width: 150px; height: auto;">
+    </div>
+</div>
 
 ### What We'll Explore
 
