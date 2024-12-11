@@ -27,7 +27,7 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
     
     <!-- Right Side: Text -->
     <div>
-        <h4>Our primary dataset provides key elements such as:</h4>
+        <h6>Our primary dataset provides key elements such as:</h6>
         <ul>
             <li>Movie Name</li>
             <li>Release Year</li>
@@ -40,7 +40,7 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
 <div style="display: flex; align-items: center; justify-content: center;">
     <!-- Left Side: Text -->
     <div style="margin-right: 20px;">
-        <h4>To enrich our analysis, we brought in additional datasets:</h4>
+        <h6>To enrich our analysis, we brought in additional datasets:</h6>
         <ul>
             <li>IMDb datasets for movie titles and user ratings on a 0-10 scale.</li>
             <li>Award data from globally recognized institutions like the Oscars, Golden Globes, Filmfare, and others.</li>
@@ -56,11 +56,20 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
 
 ### What We'll Explore
 
-We will tackle some big questions about how cast diversity influences both financial and critical success:
+In this project, we aim to address some significant questions about how cast diversity influences both financial and critical success in the film industry:
 
 - Does cast diversity impact box office performance?
+
+To explore this, we will analyze the relationship between cast diversity and box office revenue using methods like linear regression analysis to identify trends and correlations. We will also account for other influencing factors such as budget and genre to isolate the effect of diversity.
+
 - Are films with diverse casts more likely to receive award nominations?
-- Do they earn higher audience and critic ratings?
+
+By leveraging data on prestigious awards such as the Oscars, Golden Globes, and other internationally recognized accolades, we will employ propensity score matching. This method allows us to compare films with similar characteristics, except for their cast diversity, to determine whether diversity correlates with a higher likelihood of earning nominations.
+
+- Do films with diverse casts earn higher audience and critic ratings?
+
+Using IMDb user ratings and critical reviews, we will examine whether diversity in casts influences public and professional evaluations. Through techniques like logistic regression and statistical tests, we aim to uncover patterns that highlight the impact of representation on reception.
+By applying these robust analytical methods, we will delve deeper into the data to uncover insights about how diversity shapes a film's financial success and critical acclaim.
 
 ## What Makes a Cast Inclusive?
 
@@ -68,24 +77,25 @@ We will tackle some big questions about how cast diversity influences both finan
 <img src="assets/img/Intouchable.gif" alt=""/>
 </p>
 
-### Clustering the ethnicities
+### Clustering the Ethnicities
 
 When we first have a look at the ethnicities, we can see that there are a total of more than 350 different ethnicities, some of them still very similar (e.g. 'Austrian American' and 'Austrian Canadian' etc). We want to first simplify this ethnicity criterion before defining diversity. If we didn’t sort the ethnicities, a film with a cast of a German, Austrian and Swiss would be considered very diverse. This is however not what we want to consider diverse. It is for this reason that the ethnicities were first grouped into larger ethnic groups. This was done with the help of a Large Language Model (LLM), with checks and corrections done by hand. Doing this by hand was still possible thanks to the manageable number of ethnicities and the LLM doing the most time-consuming part.
 
 <div style="display: flex; align-items: center; justify-content: center;">
     <!-- Left Side: Image -->
     <div style="margin-right: 20px;">
-        <img src="assets/img/camembert1.png" alt="" style="max-width: 150px; height: auto;">
+        <img src="assets/img/camembert1.png" alt="" style="width: 150px; height: 150px; object-fit: cover;">
     </div>
     
     <!-- Right Side: Image -->
     <div>
-        <img src="assets/img/camembert2.png" alt="" style="max-width: 150px; height: auto;">
+        <img src="assets/img/camembert2.png" alt="" style="width: 150px; height: 150px; object-fit: cover;">
     </div>
 </div>
 
 
-### Diversity score
+
+### Diversity Score
 
 Once ethnicities have been categorized into larger groups (16 in total), we can begin defining diversity. Since the focus is on the diversity of the cast rather than the representation of minority groups, the country of production does not need to be taken into account.
 
@@ -99,6 +109,12 @@ To avoid obtaining a value of zero when all actors belong to a single ethnicity,
 Finally, to balance the limitations of both methods, we multiply the entropy value by the initial diversity measure. This final diversity coefficient better captures the nuances of cast diversity, penalizing films with fewer actors while rewarding those with a more even distribution of ethnicities.
 
 Plot diversity over time + comments
+
+### Reflecting on the Limitations of Our Definition
+
+Firstly, the dataset includes movies with varying numbers of actors. Films with only one actor cannot be included in the diversity calculation, as it would not provide meaningful insights into cast diversity. For a more comprehensive analysis, one could also consider whether an actor belongs to a minority group, adding another dimension to the evaluation.
+
+Secondly, the diversity coefficient relies on the previously defined ethnic groups. Any changes to the characteristics of these groups—such as their size, number, or composition—will directly impact the diversity factor. This highlights the importance of consistent and well-defined groupings when conducting such analyses.
 
 ## How to Measure the Success of a Movie?
 
