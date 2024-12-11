@@ -1,6 +1,6 @@
 ---
 layout: page
-title: The Success of Inclusive Cinema
+title: The (un)Success of Inclusive Cinema
 subtitle: Exploring the Connection Between Representation and Movie Triumph
 cover-img: /assets/img/header_img.png
 ---
