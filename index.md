@@ -58,17 +58,15 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
 
 In this project, we aim to address some significant questions about how cast diversity influences both financial and critical success in the film industry:
 
-- Does cast diversity impact box office performance?
+###### Does cast diversity impact box office performance?
+To explore this, we will analyze the relationship between cast diversity and box office revenue using methods like linear regression analysis to identify trends and correlations. We will also account for other influencing factors such as movie running time and release year to isolate the effect of diversity.
 
-To explore this, we will analyze the relationship between cast diversity and box office revenue using methods like linear regression analysis to identify trends and correlations. We will also account for other influencing factors such as budget and genre to isolate the effect of diversity.
-
-- Are films with diverse casts more likely to receive award nominations?
-
+###### Are films with diverse casts more likely to receive award nominations?
 By leveraging data on prestigious awards such as the Oscars, Golden Globes, and other internationally recognized accolades, we will employ propensity score matching. This method allows us to compare films with similar characteristics, except for their cast diversity, to determine whether diversity correlates with a higher likelihood of earning nominations.
 
-- Do films with diverse casts earn higher audience and critic ratings?
-
+###### Do films with diverse casts earn higher critic ratings?
 Using IMDb user ratings and critical reviews, we will examine whether diversity in casts influences public and professional evaluations. Through techniques like logistic regression and statistical tests, we aim to uncover patterns that highlight the impact of representation on reception.
+
 By applying these robust analytical methods, we will delve deeper into the data to uncover insights about how diversity shapes a film's financial success and critical acclaim.
 
 ## What Makes a Cast Inclusive?
@@ -83,17 +81,15 @@ When we first have a look at the ethnicities, we can see that there are a total 
 
 <div style="display: flex; align-items: center; justify-content: center;">
     <!-- Left Side: Image -->
-    <div style="margin-right: 20px;">
-        <img src="assets/img/camembert1.png" alt="" style="width: 150px; height: 150px; object-fit: cover;">
+    <div style="margin-right: 40px;">
+        <img src="assets/img/camembert1.png" alt="" style="width: 300px; height: 300px; object-fit: cover;">
     </div>
     
     <!-- Right Side: Image -->
     <div>
-        <img src="assets/img/camembert2.png" alt="" style="width: 150px; height: 150px; object-fit: cover;">
+        <img src="assets/img/camembert2.png" alt="" style="width: 300px; height: 300px; object-fit: cover;">
     </div>
 </div>
-
-
 
 ### Diversity Score
 
@@ -102,8 +98,8 @@ Once ethnicities have been categorized into larger groups (16 in total), we can 
 A straightforward way to calculate diversity is to divide the number of ethnicities represented by the number of actors in the cast. However, this method is limited. For instance, in a movie with nine actors and three ethnicities, this approach would assign the same diversity score to a distribution of ethnicities such as (3,3,3) and (1,1,7).
 To refine this measure, we incorporate the concept of entropy. Entropy accounts for the distribution of ethnicities within a cast. The basic formula for entropy is:
 
-<p>S = &Sigma; p<sub>i</sub> &middot; ln(p<sub>i</sub>)</p>
-where p<sub>i represents the proportion of the cast belonging to a particular ethnicity.
+<p>The formula for entropy is: <em>S = Σ p<sub>i</sub> · ln(p<sub>i</sub>)</em>, 
+where <em>p<sub>i</sub></em> represents the proportion of the cast belonging to a particular ethnicity.</p>
 
 To avoid obtaining a value of zero when all actors belong to a single ethnicity, we add 1 to the entropy calculation. This ensures a more meaningful result when combining this measure with our initial diversity definition.
 Finally, to balance the limitations of both methods, we multiply the entropy value by the initial diversity measure. This final diversity coefficient better captures the nuances of cast diversity, penalizing films with fewer actors while rewarding those with a more even distribution of ethnicities.
