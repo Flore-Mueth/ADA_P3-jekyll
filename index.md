@@ -14,7 +14,7 @@ Yet, this incredible influence comes with responsibility. Films can perpetuate h
 Today, even the Oscars have introduced diversity quotas for Best Picture eligibility, recognizing the importance of representation in storytelling. But beyond quotas and moral imperatives, there's a compelling question: can a diverse cast also drive cinematic success? Could the power of representation become a key motivator for filmmakers to embrace inclusivity? Let's dive into a data story to uncover the impact of diversity on movie success. 
 
 <p align="center">
-    <img src="assets/img/great_success.jpg" alt="" width="500"/> <!-- Adjust width as needed -->
+    <img src="assets/img/great_success.jpg" alt="" width="300"/> <!-- Adjust width as needed -->
 </p>
 
 ## Setting the Stage: What We're Exploring and How
@@ -23,10 +23,7 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
 
 ### About Our Inspiring Datasets
 
-<div style="margin-bottom: 40px;"> <!-- Adjust the bottom margin for spacing -->
-</div>
-
-<div style="display: flex; align-items: center; justify-content: center; margin-top: 40px;"> <!-- Adjust margin-top as needed -->
+<div style="display: flex; align-items: center; justify-content: center;">
     <!-- Left Side: Image -->
     <div style="margin-right: 20px;">
         <img src="assets/img/video_camera.png" alt="" style="max-width: 150px; height: auto;">
@@ -44,7 +41,8 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
     </div>
 </div>
 
-<div style="display: flex; align-items: center; justify-content: center; margin-top: 40px;"> <!-- Adjust margin-top for this section -->
+
+<div style="display: flex; align-items: center; justify-content: center;">
     <!-- Left Side: Text -->
     <div style="margin-right: 20px;">
         <h6>To enrich our analysis, we brought in additional datasets:</h6>
@@ -103,7 +101,6 @@ Plot diversity over time + comments
 ### Reflecting on the Limitations of Our Definition
 
 Firstly, the dataset includes movies with varying numbers of actors. Films with only one actor cannot be included in the diversity calculation, as it would not provide meaningful insights into cast diversity. For a more comprehensive analysis, one could also consider whether an actor belongs to a minority group, adding another dimension to the evaluation.
-
 Secondly, the diversity coefficient relies on the previously defined ethnic groups. Any changes to the characteristics of these groups—such as their size, number, or composition—will directly impact the diversity factor. This highlights the importance of consistent and well-defined groupings when conducting such analyses.
 
 ## How to Measure the Success of a Movie?
