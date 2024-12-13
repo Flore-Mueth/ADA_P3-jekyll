@@ -111,11 +111,21 @@ Secondly, the diversity coefficient relies on the previously defined ethnic grou
 
 ## The Cruel Truth
 
-### Linear Regression
+### overall succes 
 
-### Propensity Score
+hist + t test + regression + propensity + pearson ou spearman
 
-## Conclusion 
+### Let's dig in
+p-value tsble 
+
+#### Box office
+#### Nomination 
+#### Rating
+for the 3 --> hist + t test + Propensity Score + pearson ou spearman
+
+## Conclusion
+
+meme de omar sy triste 
 
 ## References
 
