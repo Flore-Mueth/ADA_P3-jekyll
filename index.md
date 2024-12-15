@@ -141,9 +141,8 @@ Let us now dive into the results of our data analysis and see how diversity alig
 hist
 {: .text-justify}
 
-{% include repart_bias_2a1.html %}
-
-t test table
+Is this difference truly significant? To determine this, we will perform a t-test, a statistical method used to compare the means of two groups and evaluate whether the observed differences are likely due to chance. In this case, we will compare the diversity scores of successful movies (using the overall success) versus less successful movies. This test will help us establish whether there is a statistically significant relationship. Let’s dive in!
+{: .text-justify}
 
 <!DOCTYPE html>
 <html lang="en">
