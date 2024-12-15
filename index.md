@@ -123,9 +123,9 @@ Secondly, the diversity coefficient relies on the previously defined ethnic grou
 When it comes to measuring the success of a movie, we look at three main ingredients: box office revenue, user ratings, and award nominations. These criteria capture a film's financial performance, audience appreciation, and critical acclaim, giving us a well-rounded view of success.
 {: .text-justify}
 
-- <h6>Box Office Revenue:</h6> To qualify as financially successful, a movie must exceed a revenue threshold of $38,119,483. This value, derived from the third quartile of the revenue distribution, ensures we are focusing on the top-performing films. Anything below this is not considered a box office hit.
-- <h6>User Ratings:</h6> Films need an average rating of 7/10 or higher to make the cut. This threshold, also based on the third quartile of audience ratings, highlights movies that resonate strongly with viewers.
-- <h6>Award Nominations:</h6> Success is not just about wins, but also recognition. We consider all films nominated for prestigious awards like the Oscars and Golden Globes, among others. By including nominees, we avoid being overly restrictive while still capturing critical recognition.
+- <b>Box Office Revenue:</b> To qualify as financially successful, a movie must exceed a revenue threshold of $38,119,483. This value, derived from the third quartile of the revenue distribution, ensures we are focusing on the top-performing films. Anything below this is not considered a box office hit.
+- <b>User Ratings:</b> Films need an average rating of 7/10 or higher to make the cut. This threshold, also based on the third quartile of audience ratings, highlights movies that resonate strongly with viewers.
+- <b>Award Nominations:</b> Success is not just about wins, but also recognition. We consider all films nominated for prestigious awards like the Oscars and Golden Globes, among others. By including nominees, we avoid being overly restrictive while still capturing critical recognition.
 {: .text-justify}
 
 Together, these criteria provide a multifaceted approach to evaluating a film’s overall success—if a movie meets one or more of these benchmarks, it earns its place as a standout.
@@ -175,14 +175,14 @@ Is this difference truly significant? To determine this, we will perform a t-tes
     <table>
         <thead>
             <tr>
-                <th>Test</th>
+                <th>T-test</th>
                 <th>Statistic</th>
                 <th>P-value</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>T-test</td>
+                <td>Values</td>
                 <td>-8.995</td>
                 <td>2.66e-19</td>
             </tr>
