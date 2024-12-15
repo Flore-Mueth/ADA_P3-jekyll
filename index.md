@@ -103,25 +103,43 @@ Plot diversity over time + comments
 Firstly, the dataset includes movies with varying numbers of actors. Films with only one actor cannot be included in the diversity calculation, as it would not provide meaningful insights into cast diversity. For a more comprehensive analysis, one could also consider whether an actor belongs to a minority group, adding another dimension to the evaluation.
 Secondly, the diversity coefficient relies on the previously defined ethnic groups. Any changes to the characteristics of these groups—such as their size, number, or composition—will directly impact the diversity factor. This highlights the importance of consistent and well-defined groupings when conducting such analyses.
 
-## How to Measure the Success of a Movie?
+## Money, Ratings, Price the Ingredients of a Successful Movie
 
-### Succes Score, price, box office, public
+When it comes to measuring the success of a movie, we look at three main ingredients: box office revenue, user ratings, and award nominations. These criteria capture a film's financial performance, audience appreciation, and critical acclaim, giving us a well-rounded view of success.
 
-### Set threshold (explore diff th)
+- Box Office Revenue: To qualify as financially successful, a movie must exceed a revenue threshold of $38,119,483. This value, derived from the third quartile of the revenue distribution, ensures we are focusing on the top-performing films. Anything below this is not considered a box office hit.
+- User Ratings: Films need an average rating of 7/10 or higher to make the cut. This threshold, also based on the third quartile of audience ratings, highlights movies that resonate strongly with viewers.
+- Award Nominations: Success is not just about wins, but also recognition. We consider all films nominated for prestigious awards like the Oscars and Golden Globes, among others. By including nominees, we avoid being overly restrictive while still capturing critical recognition.
 
-## The Cruel Truth
+Together, these criteria provide a multifaceted approach to evaluating a film’s overall success—if a movie meets one or more of these benchmarks, it earns its place as a standout.
+
+## The Cruel Truth of Data
+
+Let us now dive into the results of our data analysis and see how diversity aligns with the overall definition of success we established. Is cast diversity more prominent in successful movies, or do less successful films lead the way? Let’s uncover the patterns and insights hidden in the data.
 
 ### overall succes 
 
-hist + t test + regression + propensity + pearson ou spearman
+hist
+
+t test table
+
+correlation table
+
+propensity
+
+(pearson ou spearman)
 
 ### Let's dig in
 p-value tsble 
 
 #### Box office
+hist + t test + Propensity Score + pearson ou spearman
+
 #### Nomination 
+hist + t test + Propensity Score + pearson ou spearman
+
 #### Rating
-for the 3 --> hist + t test + Propensity Score + pearson ou spearman
+hist + t test + Propensity Score + pearson ou spearman
 
 ## Conclusion
 
