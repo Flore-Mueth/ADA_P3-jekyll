@@ -63,6 +63,8 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
     </div>
 </div>
 
+{% include evolution_overtime.html %}
+
 count movie over time --> we don't take in account before 1960
 
 ### What We'll Explore
