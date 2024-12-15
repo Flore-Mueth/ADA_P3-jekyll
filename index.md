@@ -108,11 +108,7 @@ To avoid obtaining a value of zero when all actors belong to a single ethnicity,
 Finally, to balance the limitations of both methods, we multiply the entropy value by the initial diversity measure. This final diversity coefficient better captures the nuances of cast diversity, penalizing films with fewer actors while rewarding those with a more even distribution of ethnicities.
 {: .text-justify}
 
-<p align="center">
-<img src="assets/img/div_time_removeb.png" alt=""/>
-</p>
-
- comments
+{% include diversity_histogram_reduced.html %}
 
 ### Reflecting on the Limitations of Our Definition
 
@@ -120,16 +116,18 @@ Firstly, the dataset includes movies with varying numbers of actors. Films with 
 Secondly, the diversity coefficient relies on the previously defined ethnic groups. Any changes to the characteristics of these groups—such as their size, number, or composition—will directly impact the diversity factor. This highlights the importance of consistent and well-defined groupings when conducting such analyses.
 {: .text-justify}
 
+<p align="center">
+<img src="assets/img/div_time_removeb.png" alt=""/>
+</p>
+
+ comments
+
 ## Money, Ratings, Price the Ingredients of a Successful Movie
 
 When it comes to measuring the success of a movie, we look at three main ingredients: box office revenue, user ratings, and award nominations. These criteria capture a film's financial performance, audience appreciation, and critical acclaim, giving us a well-rounded view of success.
-{: .text-justify}
-
-- <b>Box Office Revenue:</b> To qualify as financially successful, a movie must exceed a revenue threshold of $38,119,483. This value, derived from the third quartile of the revenue distribution, ensures we are focusing on the top-performing films. Anything below this is not considered a box office hit.
-- <b>User Ratings:</b> Films need an average rating of 7/10 or higher to make the cut. This threshold, also based on the third quartile of audience ratings, highlights movies that resonate strongly with viewers.
-- <b>Award Nominations:</b> Success is not just about wins, but also recognition. We consider all films nominated for prestigious awards like the Oscars and Golden Globes, among others. By including nominees, we avoid being overly restrictive while still capturing critical recognition.
-{: .text-justify}
-
+<b>Box Office Revenue:</b> To qualify as financially successful, a movie must exceed a revenue threshold of $38,119,483. This value, derived from the third quartile of the revenue distribution, ensures we are focusing on the top-performing films. Anything below this is not considered a box office hit.
+<b>User Ratings:</b> Films need an average rating of 7/10 or higher to make the cut. This threshold, also based on the third quartile of audience ratings, highlights movies that resonate strongly with viewers.
+<b>Award Nominations:</b> Success is not just about wins, but also recognition. We consider all films nominated for prestigious awards like the Oscars and Golden Globes, among others. By including nominees, we avoid being overly restrictive while still capturing critical recognition.
 Together, these criteria provide a multifaceted approach to evaluating a film’s overall success—if a movie meets one or more of these benchmarks, it earns its place as a standout.
 {: .text-justify}
 
@@ -212,6 +210,10 @@ hist + t test + Propensity Score + pearson ou spearman
 hist + t test + Propensity Score + pearson ou spearman
 
 ## Conclusion
+
+<p align="center">
+<img src="assets/img/omar_sy_triste.gif" alt=""/>
+</p>
 
 meme de omar sy triste 
 
