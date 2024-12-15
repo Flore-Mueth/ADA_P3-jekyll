@@ -107,7 +107,7 @@ Finally, to balance the limitations of both methods, we multiply the entropy val
 {: .text-justify}
 
 <p align="center">
-<img src="assets/img/div_time.png" alt=""/>
+<img src="assets/img/div_time_removeb.png" alt=""/>
 </p>
 
  comments
@@ -144,7 +144,6 @@ hist
 Is this difference truly significant? To determine this, we will perform a t-test, a statistical method used to compare the means of two groups and evaluate whether the observed differences are likely due to chance. In this case, we will compare the diversity scores of successful movies (using the overall success) versus less successful movies. This test will help us establish whether there is a statistically significant relationship. Let’s dive in!
 {: .text-justify}
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -176,6 +175,7 @@ Is this difference truly significant? To determine this, we will perform a t-tes
     <table>
         <thead>
             <tr>
+                <th>Test</th>
                 <th>Statistic</th>
                 <th>P-value</th>
             </tr>
@@ -183,8 +183,8 @@ Is this difference truly significant? To determine this, we will perform a t-tes
         <tbody>
             <tr>
                 <td>T-test</td>
-                <td>-8.995244941826575</td>
-                <td>2.659565863332736e-19</td>
+                <td>-8.995</td>
+                <td>2.66e-19</td>
             </tr>
         </tbody>
     </table>
