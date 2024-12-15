@@ -117,11 +117,60 @@ Together, these criteria provide a multifaceted approach to evaluating a film’
 
 Let us now dive into the results of our data analysis and see how diversity aligns with the overall definition of success we established. Is cast diversity more prominent in successful movies, or do less successful films lead the way? Let’s uncover the patterns and insights hidden in the data.
 
-### overall succes 
+### Overall Succes 
 
 hist
 
+{% include repart_bias_2a1.html %}
+
 t test table
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Table</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 8px;
+        }
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Statistic</th>
+                <th>P-value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>T-test</td>
+                <td>-8.995244941826575</td>
+                <td>2.659565863332736e-19</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
 
 correlation table
 
@@ -129,16 +178,16 @@ propensity
 
 (pearson ou spearman)
 
-### Let's dig in
+### Let's dig in...
 p-value tsble 
 
-#### Box office
+#### Box Office
 hist + t test + Propensity Score + pearson ou spearman
 
-#### Nomination 
+#### Nominations
 hist + t test + Propensity Score + pearson ou spearman
 
-#### Rating
+#### Ratings
 hist + t test + Propensity Score + pearson ou spearman
 
 ## Conclusion
