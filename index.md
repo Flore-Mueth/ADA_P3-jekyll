@@ -92,7 +92,7 @@ When we first have a look at the ethnicities, we can see that there are a total 
 
 oui oui
 
-{% include ethnic_group_piechart.html %}
+{% include ethnic_groups_piechart.html %}
 
 ### Diversity Score
 
