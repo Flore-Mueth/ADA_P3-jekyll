@@ -65,7 +65,7 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
 
 {% include evolution_overtime.html %}
 
-Our dataset spans nearly a century of filmmaking, but for our analysis, we determined that the period between 1960 and 2023 offers a rich and sufficient sample of movies. Therefore, we will focus on this era for the remainder of our study.
+Our dataset spans nearly a century of filmmaking, but for our analysis, we determined that the period between 1960 and 2015 offers a rich and sufficient sample of movies. Therefore, we will focus on this era for the remainder of our study.
 {: .text-justify}
 
 ### What We'll Explore
@@ -137,10 +137,12 @@ Let us now dive into the results of our data analysis and see how diversity alig
 
 ### Overall Succes 
 
+#### Do Successful and Unsuccessful Movies Have Different Diversity Scores?
+
 hist
 {: .text-justify}
 
-Is this difference truly significant? To determine this, we will perform a t-test, a statistical method used to compare the means of two groups and evaluate whether the observed differences are likely due to chance. In this case, we will compare the diversity scores of successful movies (using the overall success) versus less successful movies. This test will help us establish whether there is a statistically significant relationship. Let’s dive in!
+The mean diversity score for successful movies is 0.51 and for less successful movies 0.60. The diversity score seems to be lower for successful movies. But is this difference truly significant? To determine this, we will perform a t-test, a statistical method used to compare the means of two groups and evaluate whether the observed differences are likely due to chance. In this case, we will compare the diversity scores of successful movies (using the overall success) versus less successful movies. This test will help us establish whether there is a statistically significant relationship. Let’s dive in!
 {: .text-justify}
 
 <html lang="en">
@@ -190,11 +192,69 @@ Is this difference truly significant? To determine this, we will perform a t-tes
 </body>
 </html>
 
-correlation table
 
-propensity
+The significance threshold for the p-value is set at 0.05. Based on our analysis, the difference in diversity scores between successful and less successful films is statistically significant. The test statistic is -9, indicating a strong inverse relationship: the less diverse the cast, the more likely the movie is to be successful. This result challenges the assumption that diversity directly correlates with success and highlights a complex dynamic worth further exploration.
 
-(pearson ou spearman)
+#### Is Diversity Score Correlated with Movie Success?
+
+Claiming that the diversity score and a movie's success are correlated implies that the two variables tend to change together in a systematic way. To investigate this relationship, we use two key metrics: Pearson and Spearman correlation coefficients. Both metrics measure the strength and direction of the relationship between two variables. The correlation coefficient can range from -1 to 1, where a value close to 1 indicates a strong positive relationship, meaning that as one variable increases, the other does as well. A value close to 0 suggests no meaningful relationship, with the variables changing independently of each other. These metrics provide valuable insights into the connection between diversity and success.
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Table</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        th, td {
+            border: 2px solid #ddd;
+            text-align: center;
+            padding: 8px;
+        }
+        th {
+            background-color: #ffffff;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th> </th>
+                <th>Direction</th>
+                <th>Strength</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Spearman</td>
+                <td>-0.08</td>
+                <td>9e-19</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+The correlation coefficient is nearly zero, revealing that diversity scores and a movie's success march to their own beats. There’s no clear link between the two—diversity doesn’t seem to influence success, and success doesn’t seem to hinge on diversity.
+
+#### Using Propensity Score Matching to Isolate Diversity's Role in Film Success
+
+Several factors contribute to a film's success, and the diversity of a cast alone cannot be assumed to be the driving factor. To better isolate the effect of cast diversity on success, we performed paired matching using a method called propensity score matching. This approach allows us to compare films with similar probabilities of having a high diversity score, specifically those above a threshold of 0.95. This threshold was selected as it represents the third quartile of the diversity score distribution, focusing the analysis on films with the most diverse casts.<br>
+The propensity scores were calculated using logistic regression, incorporating variables such as the film's runtime, release year, number of languages present, and the number of countries involved in its production. By controlling for these confounding factors, this method helps us better understand the potential relationship between cast diversity and film success.
+
+propensity...
 
 ### Let's dig in...
 p-value tsble 
