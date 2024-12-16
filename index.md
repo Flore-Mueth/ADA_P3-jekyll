@@ -90,6 +90,8 @@ When we first have a look at the ethnicities, we can see that there are a total 
 
 {% include ethnicities_piechart.html %}
 
+oui oui
+
 {% include ethnic_group__piechart.html %}
 
 ### Diversity Score
@@ -99,7 +101,7 @@ Once ethnicities have been categorized into larger groups (16 in total), we can 
 
 A straightforward way to calculate diversity is to divide the number of ethnicities represented by the number of actors in the cast. However, this method is limited. For instance, in a movie with nine actors and three ethnicities, this approach would assign the same diversity score to a distribution of ethnicities such as (3,3,3) and (1,1,7).
 To refine this measure, we incorporate the concept of entropy. Entropy accounts for the distribution of ethnicities within a cast. The basic formula for entropy is:
-<b><p><em>S = Σ p<sub>i</sub> · ln(p<sub>i</sub>)</em></b>, 
+<p><b><em>S = Σ p<sub>i</sub> · ln(p<sub>i</sub>)</em></b>, 
 where <em>p<sub>i</sub></em> represents the proportion of the cast belonging to a particular ethnicity.</p>
 To avoid obtaining a value of zero when all actors belong to a single ethnicity, we add 1 to the entropy calculation. This ensures a more meaningful result when combining this measure with our initial diversity definition.
 Finally, to balance the limitations of both methods, we multiply the entropy value by the initial diversity measure. This final diversity coefficient better captures the nuances of cast diversity, penalizing films with fewer actors while rewarding those with a more even distribution of ethnicities.
@@ -121,10 +123,10 @@ Cool! Diversity in movie casts has been steadily increasing over time as mindset
 
 ## Money, Ratings, Price the Ingredients of a Successful Movie
 
-When it comes to measuring the success of a movie, we look at three main ingredients: box office revenue, user ratings, and award nominations. These criteria capture a film's financial performance, audience appreciation, and critical acclaim, giving us a well-rounded view of success.
-<b>Box Office Revenue:</b> To qualify as financially successful, a movie must exceed a revenue threshold of $38,119,483. This value, derived from the third quartile of the revenue distribution, ensures we are focusing on the top-performing films. Anything below this is not considered a box office hit.
-<b>User Ratings:</b> Films need an average rating of 7/10 or higher to make the cut. This threshold, also based on the third quartile of audience ratings, highlights movies that resonate strongly with viewers.
-<b>Award Nominations:</b> Success is not just about wins, but also recognition. We consider all films nominated for prestigious awards like the Oscars and Golden Globes, among others. By including nominees, we avoid being overly restrictive while still capturing critical recognition.
+When it comes to measuring the success of a movie, we look at three main ingredients: box office revenue, user ratings, and award nominations. These criteria capture a film's financial performance, audience appreciation, and critical acclaim, giving us a well-rounded view of success.<br>
+<b>Box Office Revenue:</b> To qualify as financially successful, a movie must exceed a revenue threshold of $38,119,483. This value, derived from the third quartile of the revenue distribution, ensures we are focusing on the top-performing films. Anything below this is not considered a box office hit.<br>
+<b>User Ratings:</b> Films need an average rating of 7/10 or higher to make the cut. This threshold, also based on the third quartile of audience ratings, highlights movies that resonate strongly with viewers.<br>
+<b>Award Nominations:</b> Success is not just about wins, but also recognition. We consider all films nominated for prestigious awards like the Oscars and Golden Globes, among others. By including nominees, we avoid being overly restrictive while still capturing critical recognition.<br>
 Together, these criteria provide a multifaceted approach to evaluating a film’s overall success—if a movie meets one or more of these benchmarks, it earns its place as a standout.
 {: .text-justify}
 
