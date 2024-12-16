@@ -22,7 +22,7 @@ Today, even the Oscars have introduced diversity quotas for Best Picture eligibi
 
 ## Setting the Stage
 
-In this project, we will dive into the provided CMU Movie Summary Corpus Dataset containing 42,306 plot summaries and metadata for films released from 1893 to 2013. To define "success," we have expanded our resources, integrating data on award nominations and audience ratings.
+In this project, we will dive into the provided CMU Movie Summary Corpus Dataset containing 42,306 plot summaries and metadata for films released from 1893 to 2013. To define "success," we have expanded our resources, integrating data on award nominations and audience ratings. Since our focus is on cast diversity, we exclude all films with only one character, as they do not contribute meaningfully to the diversity analysis.
 {: .text-justify}
 
 ### About Our Inspiring Datasets
@@ -35,7 +35,7 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
     
     <!-- Right Side: Text -->
     <div>
-        <h6>Our primary dataset provides key elements such as:</h6>
+        <b>Our primary dataset provides key elements such as:</b>
         <ul>
             <li>Movie Name</li>
             <li>Release Year</li>
@@ -49,7 +49,7 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
 <div style="display: flex; align-items: center; justify-content: center;">
     <!-- Left Side: Text -->
     <div style="margin-right: 20px;">
-        <h6>To enrich our analysis, we brought in additional datasets:</h6>
+        <b>To enrich our analysis, we brought in additional datasets:</b>
         <ul>
             <li>IMDb datasets for movie titles and user ratings on a 0-10 scale.</li>
             <li>Award data from globally recognized institutions like the Oscars, Golden Globes, Filmfare, and others.</li>
@@ -65,11 +65,16 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
 
 {% include evolution_overtime.html %}
 
-count movie over time --> we don't take in account before 1960
+Our dataset spans nearly a century of filmmaking, but for our analysis, we determined that the period between 1960 and 2023 offers a rich and sufficient sample of movies. Therefore, we will focus on this era for the remainder of our study.
+{: .text-justify}
 
 ### What We'll Explore
 
-In this project, we set out to uncover how cast diversity influences both the financial and critical success of films—and the results might surprise you. Does diversity impact box office performance? To find out, we will dive into the data using linear regression to pinpoint trends while accounting for factors like movie length and release year. But the intrigue does not stop at ticket sales—what about awards? Are films with more diverse casts more likely to snag nominations for prestigious accolades like the Oscars or Golden Globes? With a little help from propensity score matching, we can compare similar films and see if diversity tips the scales or not... Lastly, let’s not forget the critics and audiences, do movies with diverse casts get higher ratings on IMDb? Through logistic regression and statistical analysis, we aim to decode these patterns. Armed with these analytical tools, we are ready to explore how representation is not always a recipe for success. The data reveals a more complex story, and we are here to share it with you.
+In this project, we set out to uncover how cast diversity influences both the financial and critical success of films—and the results might surprise you.<br>
+Does diversity impact box office performance? To find out, we will dive into the data using linear regression to pinpoint trends while accounting for factors like movie length and release year.<br>
+But the intrigue does not stop at ticket sales—what about awards? Are films with more diverse casts more likely to snag nominations for prestigious accolades like the Oscars or Golden Globes? With a little help from propensity score matching, we can compare similar films and see if diversity tips the scales or not...<br>
+Lastly, let’s not forget the critics and audiences, do movies with diverse casts get higher ratings on IMDb? Through logistic regression and statistical analysis, we aim to decode these patterns.<br>
+Armed with these analytical tools, we are ready to explore how representation is not always a recipe for success. The data reveals a more complex story, and we are here to share it with you.
 {: .text-justify}
 
 ## What Makes a Cast Inclusive?
@@ -83,17 +88,9 @@ In this project, we set out to uncover how cast diversity influences both the fi
 When we first have a look at the ethnicities, we can see that there are a total of more than 350 different ethnicities, some of them still very similar (e.g. 'Austrian American' and 'Austrian Canadian' etc). We want to first simplify this ethnicity criterion before defining diversity. If we didn’t sort the ethnicities, a film with a cast of a German, Austrian and Swiss would be considered very diverse. This is however not what we want to consider diverse. It is for this reason that the ethnicities were first grouped into larger ethnic groups. This was done with the help of a Large Language Model (LLM), with checks and corrections done by hand. Doing this by hand was still possible thanks to the manageable number of ethnicities and the LLM doing the most time-consuming part.
 {: .text-justify}
 
-<div style="display: flex; align-items: center; justify-content: center;">
-    <!-- Left Side: Image -->
-    <div style="margin-right: 40px;">
-        <img src="assets/img/camembert1.png" alt="" style="width: 300px; height: 300px; object-fit: cover;">
-    </div>
-    
-    <!-- Right Side: Image -->
-    <div>
-        <img src="assets/img/camembert2.png" alt="" style="width: 300px; height: 300px; object-fit: cover;">
-    </div>
-</div>
+{% include ethnicities_piechart.html %}
+
+{% include ethnic_group__piechart.html %}
 
 ### Diversity Score
 
@@ -102,13 +99,13 @@ Once ethnicities have been categorized into larger groups (16 in total), we can 
 
 A straightforward way to calculate diversity is to divide the number of ethnicities represented by the number of actors in the cast. However, this method is limited. For instance, in a movie with nine actors and three ethnicities, this approach would assign the same diversity score to a distribution of ethnicities such as (3,3,3) and (1,1,7).
 To refine this measure, we incorporate the concept of entropy. Entropy accounts for the distribution of ethnicities within a cast. The basic formula for entropy is:
-<p><em>S = Σ p<sub>i</sub> · ln(p<sub>i</sub>)</em>, 
+<b><p><em>S = Σ p<sub>i</sub> · ln(p<sub>i</sub>)</em></b>, 
 where <em>p<sub>i</sub></em> represents the proportion of the cast belonging to a particular ethnicity.</p>
 To avoid obtaining a value of zero when all actors belong to a single ethnicity, we add 1 to the entropy calculation. This ensures a more meaningful result when combining this measure with our initial diversity definition.
 Finally, to balance the limitations of both methods, we multiply the entropy value by the initial diversity measure. This final diversity coefficient better captures the nuances of cast diversity, penalizing films with fewer actors while rewarding those with a more even distribution of ethnicities.
 {: .text-justify}
 
-{% include diversity_histogram_reduced.html %}
+{% include diversity_histogram.html %}
 
 ### Reflecting on the Limitations of Our Definition
 
@@ -120,7 +117,7 @@ Secondly, the diversity coefficient relies on the previously defined ethnic grou
 <img src="assets/img/div_time_removeb.png" alt=""/>
 </p>
 
- comments
+Cool! Diversity in movie casts has been steadily increasing over time as mindsets evolve and inclusivity becomes a greater priority. But is this shift driven by success? Let’s dive deeper and find out…
 
 ## Money, Ratings, Price the Ingredients of a Successful Movie
 
