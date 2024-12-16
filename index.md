@@ -22,7 +22,7 @@ Today, even the Oscars have introduced diversity quotas for Best Picture eligibi
 
 ## Setting the Stage
 
-In this project, we will dive into the provided CMU Movie Summary Corpus Dataset containing 42,306 plot summaries and metadata for films released from 1893 to 2013. To define "success," we have expanded our resources, integrating data on award nominations and audience ratings. Since our focus is on cast diversity, we exclude all films with only one character, as they do not contribute meaningfully to the diversity analysis.
+In this project, we will dive into the provided CMU Movie Summary Corpus Dataset containing 42'306 plot summaries and metadata for films released from 1893 to 2013. To define "success" we have expanded our resources, integrating data on award nominations and audience ratings. Since our focus is on cast diversity, we exclude all films with only one character, as they do not contribute meaningfully to the diversity analysis. Our final cleaned dataset comprises 13'000 films.
 {: .text-justify}
 
 ### About Our Inspiring Datasets
@@ -96,9 +96,7 @@ oui oui
 
 ### Diversity Score
 
-Once ethnicities have been categorized into larger groups (16 in total), we can begin defining diversity. Since the focus is on the diversity of the cast rather than the representation of minority groups, the country of production does not need to be taken into account.
-{: .text-justify}
-
+Once ethnicities have been categorized into larger groups (16 in total), we can begin defining diversity. Since the focus is on the diversity of the cast rather than the representation of minority groups, the country of production does not need to be taken into account.<br>
 A straightforward way to calculate diversity is to divide the number of ethnicities represented by the number of actors in the cast. However, this method is limited. For instance, in a movie with nine actors and three ethnicities, this approach would assign the same diversity score to a distribution of ethnicities such as (3,3,3) and (1,1,7).<br>
 To refine this measure, we incorporate the concept of entropy. Entropy accounts for the distribution of ethnicities within a cast. The basic formula for entropy is:
 <p><b><em>S = Σ p<sub>i</sub> · ln(p<sub>i</sub>)</em></b>, 
@@ -127,8 +125,10 @@ When it comes to measuring the success of a movie, we look at three main ingredi
 <b>Box Office Revenue:</b> To qualify as financially successful, a movie must exceed a revenue threshold of $38,119,483. This value, derived from the third quartile of the revenue distribution, ensures we are focusing on the top-performing films. Anything below this is not considered a box office hit.<br>
 <b>User Ratings:</b> Films need an average rating of 7/10 or higher to make the cut. This threshold, also based on the third quartile of audience ratings, highlights movies that resonate strongly with viewers.<br>
 <b>Award Nominations:</b> Success is not just about wins, but also recognition. We consider all films nominated for prestigious awards like the Oscars and Golden Globes, among others. By including nominees, we avoid being overly restrictive while still capturing critical recognition.<br>
-Together, these criteria provide a multifaceted approach to evaluating a film’s overall success—if a movie meets one or more of these benchmarks, it earns its place as a standout.
+Together, these criteria provide a multifaceted approach to evaluating a film’s overall success—if a movie meets one or more of these benchmarks, it earns its place as a standout. However, only 1,370 films in our dataset include box office revenue data. To minimize information loss and ensure a comprehensive analysis, we utilized the full dataset of 13,000 films when focusing on overall success, particularly for ratings and nominations. For analyses specifically involving box office revenue, we limited our focus to the subset of 1,370 films with recorded values. This approach ensures we make the most of the available data for each success criterion while transparently addressing the limitations posed by missing box office information for the majority of the dataset.
 {: .text-justify}
+
+{% include diversity_histogram_reduced.html %}
 
 ## The Cruel Truth of Data
 
