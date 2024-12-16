@@ -70,10 +70,10 @@ Our dataset spans nearly a century of filmmaking, but for our analysis, we deter
 
 ### What We'll Explore
 
-In this project, we set out to uncover how cast diversity influences both the financial and critical success of films—and the results might surprise you.<br>
-Does diversity impact box office performance? To find out, we will dive into the data using linear regression to pinpoint trends while accounting for factors like movie length and release year.<br>
-But the intrigue does not stop at ticket sales—what about awards? Are films with more diverse casts more likely to snag nominations for prestigious accolades like the Oscars or Golden Globes? With a little help from propensity score matching, we can compare similar films and see if diversity tips the scales or not...<br>
-Lastly, let’s not forget the critics and audiences, do movies with diverse casts get higher ratings on IMDb? Through logistic regression and statistical analysis, we aim to decode these patterns.<br>
+In this project, we set out to uncover how cast diversity influences both the financial and critical success of films—and the results might surprise you.
+Does diversity impact box office performance? To find out, we will dive into the data using linear regression to pinpoint trends while accounting for factors like movie length and release year.
+But the intrigue does not stop at ticket sales—what about awards? Are films with more diverse casts more likely to snag nominations for prestigious accolades like the Oscars or Golden Globes? With a little help from propensity score matching, we can compare similar films and see if diversity tips the scales or not...
+Lastly, let’s not forget the critics and audiences, do movies with diverse casts get higher ratings on IMDb? Through logistic regression and statistical analysis, we aim to decode these patterns.
 Armed with these analytical tools, we are ready to explore how representation is not always a recipe for success. The data reveals a more complex story, and we are here to share it with you.
 {: .text-justify}
 
@@ -123,10 +123,10 @@ Cool! Diversity in movie casts has been steadily increasing over time as mindset
 
 ## Money, Ratings, Price the Ingredients of a Successful Movie
 
-When it comes to measuring the success of a movie, we look at three main ingredients: box office revenue, user ratings, and award nominations. These criteria capture a film's financial performance, audience appreciation, and critical acclaim, giving us a well-rounded view of success.<br>
-<b>Box Office Revenue:</b> To qualify as financially successful, a movie must exceed a revenue threshold of $38,119,483. This value, derived from the third quartile of the revenue distribution, ensures we are focusing on the top-performing films. Anything below this is not considered a box office hit.<br>
-<b>User Ratings:</b> Films need an average rating of 7/10 or higher to make the cut. This threshold, also based on the third quartile of audience ratings, highlights movies that resonate strongly with viewers.<br>
-<b>Award Nominations:</b> Success is not just about wins, but also recognition. We consider all films nominated for prestigious awards like the Oscars and Golden Globes, among others. By including nominees, we avoid being overly restrictive while still capturing critical recognition.<br>
+When it comes to measuring the success of a movie, we look at three main ingredients: box office revenue, user ratings, and award nominations. These criteria capture a film's financial performance, audience appreciation, and critical acclaim, giving us a well-rounded view of success.
+<b>Box Office Revenue:</b> To qualify as financially successful, a movie must exceed a revenue threshold of $38,119,483. This value, derived from the third quartile of the revenue distribution, ensures we are focusing on the top-performing films. Anything below this is not considered a box office hit.
+<b>User Ratings:</b> Films need an average rating of 7/10 or higher to make the cut. This threshold, also based on the third quartile of audience ratings, highlights movies that resonate strongly with viewers.
+<b>Award Nominations:</b> Success is not just about wins, but also recognition. We consider all films nominated for prestigious awards like the Oscars and Golden Globes, among others. By including nominees, we avoid being overly restrictive while still capturing critical recognition.
 Together, these criteria provide a multifaceted approach to evaluating a film’s overall success—if a movie meets one or more of these benchmarks, it earns its place as a standout.
 {: .text-justify}
 
@@ -157,12 +157,12 @@ Is this difference truly significant? To determine this, we will perform a t-tes
             font-size: 16px;
         }
         th, td {
-            border: 1px solid #ddd;
+            border: 2px solid #ddd;
             text-align: center;
             padding: 8px;
         }
         th {
-            background-color: #f4f4f4;
+            background-color: #ffffff;
             font-weight: bold;
         }
         tr:nth-child(even) {
