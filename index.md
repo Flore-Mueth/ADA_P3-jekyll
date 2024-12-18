@@ -128,14 +128,12 @@ When it comes to measuring the success of a movie, we look at three main ingredi
 Together, these criteria provide a multifaceted approach to evaluating a film’s overall success—if a movie meets one or more of these benchmarks, it earns its place as a standout. However, only 1,370 films in our dataset include box office revenue data. To minimize information loss and ensure a comprehensive analysis, we utilized the full dataset of 13,000 films when focusing on overall success, particularly for ratings and nominations. For analyses specifically involving box office revenue, we limited our focus to the subset of 1,370 films with recorded values. This approach ensures we make the most of the available data for each success criterion while transparently addressing the limitations posed by missing box office information for the majority of the dataset.
 {: .text-justify}
 
-{% include diversity_histogram_reduced.html %}
-
 ## The Cruel Truth of Data
 
 Let us now dive into the results of our data analysis and see how diversity aligns with the overall definition of success we established. Is cast diversity more prominent in successful movies, or do less successful films lead the way? Let’s uncover the patterns and insights hidden in the data.
 {: .text-justify}
 
-### Overall Succes 
+### Overall Success
 
 #### Do Successful and Unsuccessful Movies Have Different Diversity Scores?
 
