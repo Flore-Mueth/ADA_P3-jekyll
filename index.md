@@ -167,15 +167,23 @@ Recall: For this part of the story the dataset is reduced to films where box off
 
 {% include diversity_box_office.html %}
 
-The mean diversity score for movies with high box revenue is 0.57 and for lower box office revenue 0.60. Here again diversity appears higher for films with lower box office revenue. Is this difference significant? Let’s do a t-test. Results from the t-test are presented in the table below.  
+The mean diversity score for movies with high box revenue is 0.57 and for lower box office revenue 0.60. Here again diversity appears higher for films with lower box office revenue. Is this difference significant? Let’s investigate:
 {: .text-justify}
 
 {% include t_test_Box_office_revenue.html %}
- 
-With a significance threshold of 0.05, the p-value reveals that the difference in diversity scores between the two groups is not statistically significant. This result brings nuance on our previous conclusion about the role of diversity in this context, leaving the question open for further exploration.
+
+TABLEAU CORRELATION A COTE
+
+For the t-test, with a significance threshold of 0.05, the p-value reveals that the difference in diversity scores between the two groups is not statistically significant. For pearson, the value is very close to 0 indicating that the two variables are not correlated. This result brings nuance on our previous conclusion about the role of diversity in this context, leaving the question open for further exploration.
 {: .text-justify}
 
-Propensity Score + pearson ou spearman
+As the dataset in this case is smaller, we decided to take the analysis a step further by performing propensity score matching. This method allows us to isolate the effect of diversity on a film's box office revenue by accounting for potential confounding factors such as the country of release, the year of release, the number of languages spoken, and the movie's runtime. By controlling for these variables, we aim to determine the specific impact of cast diversity. <br>
+We then calculated the Average Treatment Effect (ATE) to assess how the "treatment"—in this case, having a diverse cast—affects box office revenue compared to a control group. The results indicate that the diversity of a cast increases box office revenue by an average of <b>$1.57 million</b>. <br>
+While this might seem promising, it is worth considering the broader context. With an average box office revenue of $47 million, the increase of $1.57 million represents a relatively small change, suggesting that the impact of diversity, though present, may not be particularly significant in financial terms.
+{: .text-justify}
+
+Therefore, when focusing solely on the effect of diversity on box office success, the statistics point toward an insignificant connection.
+{: .text-justify}
 
 #### Nominations
 
