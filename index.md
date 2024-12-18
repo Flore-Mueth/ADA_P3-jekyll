@@ -218,4 +218,25 @@ meme de omar sy triste
 
 ## References
 
-
+<ul>
+    <li>
+        <a href="https://yes-we-are.fr/diversite-dans-le-cinema/#:~:text=Où%20en%20est%20la%20diversité,proportionnel%20à%20la%20population%20américaine" target="_blank">
+            Yes We Are. "Où en est la diversité dans le cinéma?" <i>Yes We Are</i>.
+        </a>
+    </li>
+    <li>
+        <a href="https://filmustage.com/blog/how-embracing-diversity-and-representation-is-transforming-filmmaking/" target="_blank">
+            Filmustage. "How Embracing Diversity and Representation Is Transforming Filmmaking." <i>Filmustage Blog</i>.
+        </a>
+    </li>
+    <li>
+        <a href="https://time.com/6305012/hollywood-diversity-report-asian-representation/" target="_blank">
+            Time. "Hollywood Diversity Report: Asian Representation." <i>Time</i>.
+        </a>
+    </li>
+    <li>
+        <a href="https://socialsciences.ucla.edu/wp-content/uploads/2024/06/UCLA-Hollywood-Diversity-Report-2024-Film-Streaming-5-23-2024.pdf" target="_blank">
+            UCLA Social Sciences. <i>Hollywood Diversity Report 2024: Film and Streaming</i>.
+        </a>
+    </li>
+</ul>
