@@ -116,95 +116,32 @@ Cool! Diversity in movie casts has been steadily increasing over time as mindset
 
 ## Money, Ratings, Price the Ingredients of a Successful Movie
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Success Criteria</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        h1 {
-            text-align: center;
-            color: #4CAF50;
-        }
-        .criteria-container {
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .criteria {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-        .criteria-icon {
-            font-size: 24px;
-            margin-right: 15px;
-            color: #4CAF50;
-        }
-        .criteria-content {
-            flex: 1;
-        }
-        .criteria-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .criteria-content p {
-            margin: 0;
-        }
-        .note {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #666;
-            text-align: justify;
-        }
-        .highlight {
-            font-weight: bold;
-            color: #4CAF50;
-        }
-    </style>
-</head>
-<body>
-    <h1>Movie Success Criteria</h1>
-    <div class="criteria-container">
-        <div class="criteria">
-            <div class="criteria-icon">💰</div>
-            <div class="criteria-content">
-                <div class="criteria-title">Box Office Revenue</div>
-                <p>To qualify as financially successful, a movie must exceed a revenue threshold of <span class="highlight">$38,119,483</span>. This value, derived from the third quartile of the revenue distribution, ensures we are focusing on the top-performing films. Anything below this is not considered a box office hit.</p>
-            </div>
-        </div>
-        <div class="criteria">
-            <div class="criteria-icon">⭐</div>
-            <div class="criteria-content">
-                <div class="criteria-title">User Ratings</div>
-                <p>Films need an average rating of <span class="highlight">7/10</span> or higher to make the cut. This threshold, also based on the third quartile of audience ratings, highlights movies that resonate strongly with viewers.</p>
-            </div>
-        </div>
-        <div class="criteria">
-            <div class="criteria-icon">🏆</div>
-            <div class="criteria-content">
-                <div class="criteria-title">Award Nominations</div>
-                <p>Success is not just about wins, but also recognition. We consider all films nominated for prestigious awards like the Oscars and Golden Globes, among others. By including nominees, we avoid being overly restrictive while still capturing critical recognition.</p>
-            </div>
-        </div>
-        <div class="note">
-            Together, these criteria provide a multifaceted approach to evaluating a film’s overall success—if a movie meets one or more of these benchmarks, it earns its place as a standout. However, only <span class="highlight">1,370 films</span> in our dataset include box office revenue data. To minimize information loss and ensure a comprehensive analysis, we utilized the full dataset of <span class="highlight">13,000 films</span> when focusing on overall success, particularly for ratings and nominations. For analyses specifically involving box office revenue, we limited our focus to the subset of <span class="highlight">1,370 films</span> with recorded values. This approach ensures we make the most of the available data for each success criterion while transparently addressing the limitations posed by missing box office information for the majority of the dataset.
+<div class="criteria-container">
+    <div class="criteria">
+        <div class="criteria-icon">💰</div>
+        <div class="criteria-content">
+            <div class="criteria-title">Box Office Revenue</div>
+            <p>To qualify as financially successful, a movie must exceed a revenue threshold of <span class="highlight">$38,119,483</span>. This value, derived from the third quartile of the revenue distribution, ensures we are focusing on the top-performing films. Anything below this is not considered a box office hit.</p>
         </div>
     </div>
-</body>
-</html>
+    <div class="criteria">
+        <div class="criteria-icon">⭐</div>
+        <div class="criteria-content">
+            <div class="criteria-title">User Ratings</div>
+            <p>Films need an average rating of <span class="highlight">7/10</span> or higher to make the cut. This threshold, also based on the third quartile of audience ratings, highlights movies that resonate strongly with viewers.</p>
+        </div>
+    </div>
+    <div class="criteria">
+        <div class="criteria-icon">🏆</div>
+        <div class="criteria-content">
+            <div class="criteria-title">Award Nominations</div>
+            <p>Success is not just about wins, but also recognition. We consider all films nominated for prestigious awards like the Oscars and Golden Globes, among others. By including nominees, we avoid being overly restrictive while still capturing critical recognition.</p>
+        </div>
+    </div>
+    <div class="note">
+        Together, these criteria provide a multifaceted approach to evaluating a film’s overall success—if a movie meets one or more of these benchmarks, it earns its place as a standout. However, only <span class="highlight">1,370 films</span> in our dataset include box office revenue data. To minimize information loss and ensure a comprehensive analysis, we utilized the full dataset of <span class="highlight">13,000 films</span> when focusing on overall success, particularly for ratings and nominations. For analyses specifically involving box office revenue, we limited our focus to the subset of <span class="highlight">1,370 films</span> with recorded values. This approach ensures we make the most of the available data for each success criterion while transparently addressing the limitations posed by missing box office information for the majority of the dataset.
+    </div>
+</div>
 
 ## The Cruel Truth of Data
 
@@ -215,59 +152,12 @@ Let us now dive into the results of our data analysis and see how diversity alig
 
 #### Do Successful and Unsuccessful Movies Have Different Diversity Scores?
 
-hist
-{: .text-justify}
+{% include diversity_success.html %}
 
 The mean diversity score for successful movies is 0.51 and for less successful movies 0.60. The diversity score seems to be lower for successful movies. But is this difference truly significant? To determine this, we will perform a t-test, a statistical method used to compare the means of two groups and evaluate whether the observed differences are likely due to chance. In this case, we will compare the diversity scores of successful movies (using the overall success) versus less successful movies. This test will help us establish whether there is a statistically significant relationship. Let’s dive in!
 {: .text-justify}
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Statistics Table</title>
-    <style>
-        table {
-            width: 50%;
-            border-collapse: collapse;
-            margin: 20px auto;
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-        }
-        th, td {
-            border: 2px solid #ddd;
-            text-align: center;
-            padding: 8px;
-        }
-        th {
-            background-color: #ffffff;
-            font-weight: bold;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-    </style>
-</head>
-<body>
-    <table>
-        <thead>
-            <tr>
-                <th> </th>
-                <th>Statistic</th>
-                <th>P-value</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>T-test</td>
-                <td>-8.995</td>
-                <td>2.66e-19</td>
-            </tr>
-        </tbody>
-    </table>
-</body>
-</html>
-
+{% include t_test_Overall_success.html %}
 
 The significance threshold for the p-value is set at 0.05. Based on our analysis, the difference in diversity scores between successful and less successful films is statistically significant. The test statistic is -9, indicating a strong inverse relationship: the less diverse the cast, the more likely the movie is to be successful. This result challenges the assumption that diversity directly correlates with success and highlights a complex dynamic worth further exploration.
 
