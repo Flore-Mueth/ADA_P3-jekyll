@@ -126,7 +126,7 @@ Let us now dive into the results of our data analysis and see how diversity alig
 
 ### Overall Success
 
-##### Do Successful and Unsuccessful Movies Have Different Diversity Scores?
+#### Do Successful and Unsuccessful Movies Have Different Diversity Scores?
 
 {% include diversity_success.html %}
 
@@ -138,7 +138,7 @@ The mean diversity score for successful movies is 0.51 and for less successful m
 The significance threshold for the p-value is set at 0.05. Based on our analysis, the difference in diversity scores between successful and less successful films is statistically significant. The test statistic is -9, indicating a strong inverse relationship: the less diverse the cast, the more likely the movie is to be successful. This result challenges the assumption that diversity directly correlates with success and highlights a complex dynamic worth further exploration.
 {: .text-justify}
 
-##### Is Diversity Score Correlated with Movie Success?
+#### Is Diversity Score Correlated with Movie Success?
 
 Claiming that the diversity score and a movie's success are correlated implies that the two variables tend to change together in a systematic way. To investigate this relationship, we use two key metrics: Pearson and Spearman correlation coefficients. Both metrics measure the strength and direction of the relationship between two variables. The correlation coefficient can range from -1 to 1, where a value close to 1 indicates a strong positive relationship, meaning that as one variable increases, the other does as well. A value close to 0 suggests no meaningful relationship, with the variables changing independently of each other. These metrics provide valuable insights into the connection between diversity and success.
 {: .text-justify}
