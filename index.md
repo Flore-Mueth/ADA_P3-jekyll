@@ -165,53 +165,7 @@ The significance threshold for the p-value is set at 0.05. Based on our analysis
 
 Claiming that the diversity score and a movie's success are correlated implies that the two variables tend to change together in a systematic way. To investigate this relationship, we use two key metrics: Pearson and Spearman correlation coefficients. Both metrics measure the strength and direction of the relationship between two variables. The correlation coefficient can range from -1 to 1, where a value close to 1 indicates a strong positive relationship, meaning that as one variable increases, the other does as well. A value close to 0 suggests no meaningful relationship, with the variables changing independently of each other. These metrics provide valuable insights into the connection between diversity and success.
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Statistics Table</title>
-    <style>
-        table {
-            width: 50%;
-            border-collapse: collapse;
-            margin: 20px auto;
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-        }
-        th, td {
-            border: 2px solid #ddd;
-            text-align: center;
-            padding: 8px;
-        }
-        th {
-            background-color: #ffffff;
-            font-weight: bold;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-    </style>
-</head>
-<body>
-    <table>
-        <thead>
-            <tr>
-                <th> </th>
-                <th>Direction</th>
-                <th>Strength</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Spearman</td>
-                <td>-0.08</td>
-                <td>9e-19</td>
-            </tr>
-        </tbody>
-    </table>
-</body>
-</html>
-
+TABLEAU ....
 
 The correlation coefficient is nearly zero, revealing that diversity scores and a movie's success march to their own beats. There’s no clear link between the two—diversity doesn’t seem to influence success, and success doesn’t seem to hinge on diversity.
 
@@ -226,13 +180,28 @@ propensity...
 p-value tsble 
 
 #### Box Office
-hist + t test + Propensity Score + pearson ou spearman
+
+{% include diversity_box_office.html %}
+
+{% include t_test_Box_office_revenue.html %}
+
+Propensity Score + pearson ou spearman
 
 #### Nominations
-hist + t test + Propensity Score + pearson ou spearman
+
+{% include diversity_nominations.html %}
+
+{% include t_test_Nomination.html %}
+
+Propensity Score + pearson ou spearman
 
 #### Ratings
-hist + t test + Propensity Score + pearson ou spearman
+
+{% include diversity_ratings.html %}
+
+{% include t_test_Ratings.html %}
+
+Propensity Score + pearson ou spearman
 
 ## Conclusion
 
