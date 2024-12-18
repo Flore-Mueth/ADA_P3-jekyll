@@ -3,60 +3,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #D8AC62;
-            color: #333;
-        }
-        h1 {
-            text-align: center;
-            color: #A01812;
-        }
-        .criteria-container {
+        /* Scope styles to a specific container class */
+        .scoped-body .criteria-container {
             margin: 20px auto;
             padding: 20px;
             background-color: #D8AC62;
-            border: 1px solid #ddd;
+            border: 1px solid #D8AC62;
             border-radius: 8px;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .criteria {
+        .scoped-body .criteria {
             display: flex;
             align-items: flex-start;
             margin-bottom: 20px;
         }
-        .criteria-icon {
+        .scoped-body .criteria-icon {
             font-size: 24px;
             margin-right: 15px;
             color: #A01812;
         }
-        .criteria-content {
+        .scoped-body .criteria-content {
             flex: 1;
         }
-        .criteria-title {
+        .scoped-body .criteria-title {
             font-size: 18px;
             font-weight: bold;
             margin-bottom: 5px;
         }
-        .criteria-content p {
+        .scoped-body .criteria-content p {
             margin: 0;
         }
-        .note {
+        .scoped-body .note {
             margin-top: 20px;
             font-size: 14px;
             color: #666;
             text-align: justify;
         }
-        .highlight {
+        .scoped-body .highlight {
             font-weight: bold;
             color: #A01812;
         }
     </style>
 </head>
-<body>
-    <h1>Movie Success Criteria</h1>
+<body class="scoped-body">
     <div class="criteria-container">
         <div class="criteria">
             <div class="criteria-icon">💰</div>

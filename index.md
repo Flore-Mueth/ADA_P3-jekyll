@@ -114,7 +114,7 @@ Secondly, the diversity coefficient relies on the previously defined ethnic grou
 
 Cool! Diversity in movie casts has been steadily increasing over time as mindsets evolve and inclusivity becomes a greater priority. But is this shift driven by success? Let’s dive deeper and find out…
 
-## Money, Ratings, Price the Ingredients of a Successful Movie
+## Movie Success Criteria
 
 {% include ingredients_of_success.html %}
 
@@ -125,7 +125,7 @@ Let us now dive into the results of our data analysis and see how diversity alig
 
 ### Overall Success
 
-#### Do Successful and Unsuccessful Movies Have Different Diversity Scores?
+##### Do Successful and Unsuccessful Movies Have Different Diversity Scores?
 
 {% include diversity_success.html %}
 
@@ -135,24 +135,30 @@ The mean diversity score for successful movies is 0.51 and for less successful m
 {% include t_test_Overall_success.html %}
 
 The significance threshold for the p-value is set at 0.05. Based on our analysis, the difference in diversity scores between successful and less successful films is statistically significant. The test statistic is -9, indicating a strong inverse relationship: the less diverse the cast, the more likely the movie is to be successful. This result challenges the assumption that diversity directly correlates with success and highlights a complex dynamic worth further exploration.
+{: .text-justify}
 
-#### Is Diversity Score Correlated with Movie Success?
+##### Is Diversity Score Correlated with Movie Success?
 
 Claiming that the diversity score and a movie's success are correlated implies that the two variables tend to change together in a systematic way. To investigate this relationship, we use two key metrics: Pearson and Spearman correlation coefficients. Both metrics measure the strength and direction of the relationship between two variables. The correlation coefficient can range from -1 to 1, where a value close to 1 indicates a strong positive relationship, meaning that as one variable increases, the other does as well. A value close to 0 suggests no meaningful relationship, with the variables changing independently of each other. These metrics provide valuable insights into the connection between diversity and success.
+{: .text-justify}
 
 TABLEAU ....
 
 The correlation coefficient is nearly zero, revealing that diversity scores and a movie's success march to their own beats. There’s no clear link between the two—diversity doesn’t seem to influence success, and success doesn’t seem to hinge on diversity.
+{: .text-justify}
 
-#### Using Propensity Score Matching to Isolate Diversity's Role in Film Success
+##### Using Propensity Score Matching to Isolate Diversity's Role in Film Success
 
 Several factors contribute to a film's success, and the diversity of a cast alone cannot be assumed to be the driving factor. To better isolate the effect of cast diversity on success, we performed paired matching using a method called propensity score matching. This approach allows us to compare films with similar probabilities of having a high diversity score, specifically those above a threshold of 0.95. This threshold was selected as it represents the third quartile of the diversity score distribution, focusing the analysis on films with the most diverse casts.<br>
 The propensity scores were calculated using logistic regression, incorporating variables such as the film's runtime, release year, number of languages present, and the number of countries involved in its production. By controlling for these confounding factors, this method helps us better understand the potential relationship between cast diversity and film success.
+{: .text-justify}
 
 propensity...
 
 ### Let's dig in...
-p-value tsble 
+
+Let us now dive deeper and analyze each key criterion of success—box office revenue, award nominations, and user ratings—individually. By examining these factors separately, we aim to uncover their specific relationships with diversity and determine if any one of them carries a greater influence or impact.
+{: .text-justify}
 
 #### Box Office
 
