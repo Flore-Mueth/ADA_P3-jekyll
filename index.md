@@ -162,15 +162,18 @@ Let us now dive deeper and analyze each key criterion of success—box office re
 
 #### Box Office
 
-Recall: For this part of the story the dataset is reduced to films where bof office revenue is available, meaning we are working with 1'370 movies.
+Recall: For this part of the story the dataset is reduced to films where box office revenue is available, meaning we are working with 1'370 movies.
+{: .text-justify}
 
 {% include diversity_box_office.html %}
 
 The mean diversity score for movies with high box revenue is 0.57 and for lower box office revenue 0.60. Here again diversity appears higher for films with lower box office revenue. Is this difference significant? Let’s do a t-test. Results from the t-test are presented in the table below.  
+{: .text-justify}
 
 {% include t_test_Box_office_revenue.html %}
  
-The significance threshold of the p-value is 0.05. Therefore the difference of diversity score between those two groups is not significant... Not helping diversity...
+With a significance threshold of 0.05, the p-value reveals that the difference in diversity scores between the two groups is not statistically significant. This result brings nuance on our previous conclusion about the role of diversity in this context, leaving the question open for further exploration.
+{: .text-justify}
 
 Propensity Score + pearson ou spearman
 
