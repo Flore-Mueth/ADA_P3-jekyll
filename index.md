@@ -65,7 +65,7 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
 
 {% include distribution_realease_date.html %}
 
-Our dataset spans nearly a century of filmmaking, but for our analysis, we determined that the period between 1960 and 2015 offers a rich and sufficient sample of movies. Therefore, we will focus on this era for the remainder of our study.
+Our dataset spans nearly a century of filmmaking, but for our analysis, we determined that the period between 1960 and 2013 offers a rich and sufficient sample of movies. Therefore, we will focus on this era for the remainder of our study.
 {: .text-justify}
 
 ### What We'll Explore
@@ -91,32 +91,31 @@ When we first have a look at the ethnicities, we can see that there are a total 
 
 {% include ethnicities_piechart.html %}
 
-oui oui
-
-{% include ethnic_groups_piechart.html %}
-
 ### Diversity Score
 
 Once ethnicities have been categorized into larger groups (16 in total), we can begin defining diversity. Since the focus is on the diversity of the cast rather than the representation of minority groups, the country of production does not need to be taken into account.<br>
+{: .text-justify}
 A straightforward way to calculate diversity is to divide the number of ethnicities represented by the number of actors in the cast. However, this method is limited. For instance, in a movie with nine actors and three ethnicities, this approach would assign the same diversity score to a distribution of ethnicities such as (3,3,3) and (1,1,7).<br>
+{: .text-justify}
 To refine this measure, we incorporate the concept of entropy. Entropy accounts for the distribution of ethnicities within a cast. The basic formula for entropy is:
+{: .text-justify}
 <p><b><em>S = Σ p<sub>i</sub> · ln(p<sub>i</sub>)</em></b>, 
 where <em>p<sub>i</sub></em> represents the proportion of the cast belonging to a particular ethnicity.</p>
 To avoid obtaining a value of zero when all actors belong to a single ethnicity, we add 1 to the entropy calculation. This ensures a more meaningful result when combining this measure with our initial diversity definition.<br>
+{: .text-justify}
 Finally, to balance the limitations of both methods, we multiply the entropy value by the initial diversity measure. This final diversity coefficient better captures the nuances of cast diversity, penalizing films with fewer actors while rewarding those with a more even distribution of ethnicities.
 {: .text-justify}
 
-{% include diversity_histogram.html %}
+{% include diversity_histogram_essai.html %}
 
 ### Reflecting on the Limitations of Our Definition
 
 Firstly, the dataset includes movies with varying numbers of actors. Films with only one actor cannot be included in the diversity calculation, as it would not provide meaningful insights into cast diversity. For a more comprehensive analysis, one could also consider whether an actor belongs to a minority group, adding another dimension to the evaluation.<br>
+{: .text-justify}
 Secondly, the diversity coefficient relies on the previously defined ethnic groups. Any changes to the characteristics of these groups—such as their size, number, or composition—will directly impact the diversity factor. This highlights the importance of consistent and well-defined groupings when conducting such analyses.
 {: .text-justify}
 
-<p align="center">
-<img src="assets/img/div_time_removeb.png" alt=""/>
-</p>
+{% include average_diversity_per_year.html %}
 
 Cool! Diversity in movie casts has been steadily increasing over time as mindsets evolve and inclusivity becomes a greater priority. But is this shift driven by success? Let’s dive deeper and find out…
 
