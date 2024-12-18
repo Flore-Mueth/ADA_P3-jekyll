@@ -63,7 +63,7 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
     </div>
 </div>
 
-{% include evolution_overtime.html %}
+{% include distribution_realease_date.html %}
 
 Our dataset spans nearly a century of filmmaking, but for our analysis, we determined that the period between 1960 and 2015 offers a rich and sufficient sample of movies. Therefore, we will focus on this era for the remainder of our study.
 {: .text-justify}
@@ -71,6 +71,7 @@ Our dataset spans nearly a century of filmmaking, but for our analysis, we deter
 ### What We'll Explore
 
 In this project, we set out to uncover how cast diversity influences both the financial and critical success of films—and the results might surprise you.<br>
+{: .text-justify}
 Does diversity impact box office performance? To find out, we will dive into the data using linear regression to pinpoint trends while accounting for factors like movie length and release year.<br>
 But the intrigue does not stop at ticket sales—what about awards? Are films with more diverse casts more likely to snag nominations for prestigious accolades like the Oscars or Golden Globes? With a little help from propensity score matching, we can compare similar films and see if diversity tips the scales or not...<br>
 Lastly, let’s not forget the critics and audiences, do movies with diverse casts get higher ratings on IMDb? Through logistic regression and statistical analysis, we aim to decode these patterns.<br>
