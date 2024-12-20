@@ -174,7 +174,7 @@ The correlation coefficient is nearly zero, revealing that diversity scores and 
 Let us now dive deeper and analyze each key criterion of success—box office revenue, award nominations, and user ratings—individually. By examining these factors separately, we aim to uncover their specific relationships with diversity and determine if any one of them carries a greater influence or impact. We will apply the same methodology used in the overall success analysis.
 {: .text-justify}
 
-#### Box Office
+#### <span class="criteria-icon">💰</span> Box Office
 
 Recall: For this part of the story the dataset is reduced to films where box office revenue is available, meaning we are working with 4'726 movies.
 {: .text-justify}
