@@ -206,11 +206,11 @@ As the dataset in this case is smaller, we decided to take the analysis a step f
     {% include propensity_score_matching.html %}
 </div>
 
-The plot reveals a clear pattern: most movies in the control group (those with lower diversity scores) cluster in the lower range of box office revenue. In contrast, the treated group (films with higher diversity scores) is associated with higher box office revenue. This visual distinction suggests a potential positive relationship between cast diversity and financial success!<br>
-Therefore, when focusing solely on the effect of diversity on box office success, the statistics point toward .................
+The plot reveals that most movies in the control group (those with lower diversity scores) cluster in the lower range of box office revenue. In contrast, the treated group (films with higher diversity scores) is associated with higher box office revenue.<br>
+The average treatment effect (ATE) determines how the treatment (having a diverse cast) changes the outcome (box office office revenue). We find a value of $52 millions, this average treatment effect seems way to high. We have a few hypotheses to explain this very high ATE. Maybe the criteria we matched on were not good criteria. We matched on the number of countries but then it would mean that a film with countries India and Sri Lanka can be matched with a movie with countries France and United States just because they have the same number of countries. Maybe some other criteria could have been matched on and we overlooked then. Maybe matching on movie genre could have been a good idea. More importantly, describing the data for box office revenue we have a very high standard deviation and the data is skewed.
 {: .text-justify}
 
-#### Ratings
+#### <span class="criteria-icon">⭐</span> Ratings
 
 <div style="text-align: center; font-size: 80%; line-height: 1.2;">
     {% include diversity_ratings.html %}
@@ -233,7 +233,13 @@ The difference in diversity scores between high-rated and low-rated films appear
 This highlights a complex dynamic where diversity may influence ratings in specific cases but does not establish a clear overall trend.
 {: .text-justify}
 
-#### Nominations
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+    {% include propensity_score_matching_ratings.html %}
+</div>
+
+The ATE is 0.11 out of ten, we can consider that the diversity of the cast doesn't have an effect on the ratings. Compared to the one we got for the box office revenue, it seems way more logical. It can be explained by the fact that the standard deviation is not very high in this case.
+
+#### <span class="criteria-icon">🏆</span> Nominations
 
 <div style="text-align: center; font-size: 80%; line-height: 1.2;">
     {% include diversity_nominations.html %}
