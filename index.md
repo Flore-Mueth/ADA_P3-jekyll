@@ -63,7 +63,7 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
     </div>
 </div>
 
-<div style="text-align: center;">
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
     {% include distribution_realease_date.html %}
 </div>
 
@@ -90,7 +90,13 @@ Armed with these analytical tools, we are ready to explore how representation is
 When we first have a look at the ethnicities, we can see that there are a total of more than 350 different ethnicities, some of them still very similar (e.g. 'Austrian American' and 'Austrian Canadian' etc). We want to first simplify this ethnicity criterion before defining diversity. If we didn’t sort the ethnicities, a film with a cast of a German, Austrian and Swiss would be considered very diverse. This is however not what we want to consider diverse. It is for this reason that the ethnicities were first grouped into larger ethnic groups. This was done with the help of a Large Language Model (LLM), with checks and corrections done by hand. Doing this by hand was still possible thanks to the manageable number of ethnicities and the LLM doing the most time-consuming part.
 {: .text-justify}
 
-{% include ethnicities_piechart.html %}
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+    {% include ethnicities_piechart.html %}
+</div>
+
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+    {% include ethnic_groups_piechart.html %}
+</div>
 
 ### Diversity Score
 
@@ -104,9 +110,13 @@ To avoid obtaining a value of zero when all actors belong to a single ethnicity,
 Finally, to balance the limitations of both methods, we multiply the entropy value by the initial diversity measure. This final diversity coefficient better captures the nuances of cast diversity, penalizing films with fewer actors while rewarding those with a more even distribution of ethnicities.
 {: .text-justify}
 
-{% include diversity_histogram_essai.html %}
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+    {% include diversity_histogram_essai.html %}
+</div>
 
-{% include average_diversity_per_year.html %}
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+    {% include average_diversity_per_year.html %}
+</div>
 
 Cool! Diversity in movie casts has been steadily increasing over time as mindsets evolve and inclusivity becomes a greater priority. But is this shift driven by success? Let’s dive deeper and find out…
 {: .text-justify}
@@ -119,7 +129,9 @@ Secondly, the diversity coefficient relies on the previously defined ethnic grou
 
 ## Movie Success Criteria
 
-{% include ingredients_of_success.html %}
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+    {% include ingredients_of_success.html %}
+</div>
 
 ## The Truth of Data
 
