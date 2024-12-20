@@ -63,7 +63,7 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
     </div>
 </div>
 
-<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+<div style="text-align: center; font-size: 50%; line-height: 1;">
     {% include distribution_realease_date.html %}
 </div>
 
@@ -129,9 +129,7 @@ Secondly, the diversity coefficient relies on the previously defined ethnic grou
 
 ## Movie Success Criteria
 
-<div style="text-align: center; font-size: 80%; line-height: 1.2;">
-    {% include ingredients_of_success.html %}
-</div>
+{% include ingredients_of_success.html %}
 
 ## The Truth of Data
 
@@ -142,22 +140,30 @@ Let us now dive into the results of our data analysis and see how diversity alig
 
 #### Do Successful and Unsuccessful Movies Have Different Diversity Scores?
 
-{% include diversity_success.html %}
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+    {% include diversity_success.html %}
+</div>
 
 The mean diversity score for successful movies is 0.51 and for less successful movies 0.60. The diversity score seems to be lower for successful movies. But is this difference truly significant? To determine this, we will perform a t-test, a statistical method used to compare the means of two groups and evaluate whether the observed differences are likely due to chance. In this case, we will compare the diversity scores of successful movies (using the overall success) versus less successful movies. This test will help us establish whether there is a statistically significant relationship. Let’s dive in!
 {: .text-justify}
 
-{% include t_test_Overall_success.html %}
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+    {% include t_test_Overall_success.html %}
+</div>
 
 The significance threshold for the p-value is set at 0.05. Based on our analysis, the difference in diversity scores between successful and less successful films is statistically significant. The test statistic is -9, indicating a strong inverse relationship: the less diverse the cast, the more likely the movie is to be successful. This result challenges the assumption that diversity directly correlates with success and highlights a complex dynamic worth further exploration.
 {: .text-justify}
 
 #### Is Diversity Score Correlated with Movie Success?
 
+LINEAR REGRESSION NULLE
+
 Claiming that the diversity score and a movie's success are correlated implies that the two variables tend to change together in a systematic way. To investigate this relationship, we use two key metrics: Pearson and Spearman correlation coefficients. Both metrics measure the strength and direction of the relationship between two variables. The correlation coefficient can range from -1 to 1, where a value close to 1 indicates a strong positive relationship, meaning that as one variable increases, the other does as well. A value close to 0 suggests no meaningful relationship, with the variables changing independently of each other. These metrics provide valuable insights into the connection between diversity and success.
 {: .text-justify}
 
-TABLEAU ....
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+    {% include corr_Success_Spearman.html %}
+</div>
 
 The correlation coefficient is nearly zero, revealing that diversity scores and a movie's success march to their own beats. There’s no clear link between the two—diversity doesn’t seem to influence success, and success doesn’t seem to hinge on diversity.
 {: .text-justify}
@@ -172,14 +178,20 @@ Let us now dive deeper and analyze each key criterion of success—box office re
 Recall: For this part of the story the dataset is reduced to films where box office revenue is available, meaning we are working with 1'370 movies.
 {: .text-justify}
 
-{% include diversity_box_office.html %}
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+    {% include diversity_box_office.html %}
+</div>
 
 The mean diversity score for movies with high box revenue is 0.57 and for lower box office revenue 0.60. Here again diversity appears higher for films with lower box office revenue. Is this difference significant? Let’s investigate:
 {: .text-justify}
 
-{% include t_test_Box_office_revenue.html %}
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+    {% include t_test_Box_office_revenue.html %}
+</div>
 
-TABLEAU CORRELATION A COTE
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+    {% include corr_Movie_box_office_revenue_Pearson.html %}
+</div>
 
 For the t-test, with a significance threshold of 0.05, the p-value reveals that the difference in diversity scores between the two groups is not statistically significant. For pearson, the value is very close to 0 indicating that the two variables are not correlated. This result brings nuance on our previous conclusion about the role of diversity in this context, leaving the question open for further exploration.
 {: .text-justify}
@@ -195,14 +207,20 @@ Therefore, when focusing solely on the effect of diversity on box office success
 
 #### Ratings
 
-{% include diversity_ratings.html %}
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+    {% include diversity_ratings.html %}
+</div>
 
 The mean diversity score for movies with high ratings is 0.50 and for movies with low ratings 0.60. The diversity score seems to be lower for high rated movies. But is this difference really significant? Let’s conduct a t-test:
 {: .text-justify}
 
-{% include t_test_Ratings.html %}
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+    {% include t_test_Ratings.html %}
+</div>
 
-TABLEAU CORRELATION A COTE
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+    {% include corr_Ratings_Pearson.html %}
+</div>
 
 The difference in diversity scores between high-rated and low-rated films appears to be statistically significant, with a test statistic of -10. This indicates that movies with less diverse casts tend to receive higher ratings. However, the correlation coefficient is nearly zero, suggesting that there is no consistent or meaningful relationship between diversity scores and movie ratings.<br>
 This highlights a complex dynamic where diversity may influence ratings in specific cases but does not establish a clear overall trend.
@@ -210,14 +228,20 @@ This highlights a complex dynamic where diversity may influence ratings in speci
 
 #### Nominations
 
-{% include diversity_nominations.html %}
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+    {% include diversity_nominations.html %}
+</div>
 
 The mean diversity score for movies nominated is 0.64 and for movies not nominated 0.57. The diversity score seems higher for films nominated. But is this difference really significant? Let’s conduct a t-test. Results from the t-test are presented in the table below.
 {: .text-justify}
 
-{% include t_test_Nomination.html %}
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+    {% include t_test_Nomination.html %}
+</div>
 
-TABLEAU CORRELATION
+<div style="text-align: center; font-size: 80%; line-height: 1.2;">
+    {% include corr_Nomination_Spearman.html %}
+</div>
 
 The difference in diversity scores between nominated and non-nominated films appears significant, with a test statistic of 6, indicating that films with more diverse casts are more likely to be nominated. However, consistent with our earlier findings, the correlation coefficient is nearly zero, suggesting that there is no strong or systematic relationship between diversity scores and nominations overall. This aligns with the pattern we've observed: while diversity may have an influence in certain cases, it does not establish a clear or consistent trend.
 {: .text-justify}
