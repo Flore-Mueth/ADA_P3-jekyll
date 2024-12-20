@@ -63,7 +63,9 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
     </div>
 </div>
 
-{% include distribution_realease_date.html %}
+<div style="text-align: center;">
+    {% include distribution_realease_date.html %}
+</div>
 
 Our dataset spans nearly a century of filmmaking, but for our analysis, we determined that the period between 1960 and 2013 offers a rich and sufficient sample of movies. Therefore, we will focus on this era for the remainder of our study.
 {: .text-justify}
