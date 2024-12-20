@@ -144,7 +144,8 @@ Let us now dive into the results of our data analysis and see how diversity alig
     {% include diversity_success.html %}
 </div>
 
-The mean diversity score for successful movies is 2.54 and for less successful movies 2.29. The diversity score seems to be higher for successful movies. But is this difference truly significant? To determine this, we will perform a t-test, a statistical method used to compare the means of two groups and evaluate whether the observed differences are likely due to chance. In this case, we will compare the diversity scores of successful movies (using the overall success) versus less successful movies. This test will help us establish whether there is a statistically significant relationship. Let’s dive in!
+The mean diversity score for successful movies is 2.54 and for less successful movies 2.29. The diversity score seems to be higher for successful movies. We can notice that the standard deviation on this plot is very important. This is due to the large number data we are working with.<br>
+But is this difference truly significant? To determine this, we will perform a t-test, a statistical method used to compare the means of two groups and evaluate whether the observed differences are likely due to chance. In this case, we will compare the diversity scores of successful movies (using the overall success) versus less successful movies. This test will help us establish whether there is a statistically significant relationship. Let’s dive in!
 {: .text-justify}
 
 <div style="text-align: center; font-size: 80%; line-height: 1.2;">
@@ -156,7 +157,7 @@ The significance threshold for the p-value is set at 0.05. Based on our analysis
 
 #### Is Diversity Score Correlated with Movie Success?
 
-Claiming that the diversity score and a movie's success are correlated implies that the two variables tend to change together in a systematic way. To investigate this relationship, we use two key metrics: Pearson and Spearman correlation coefficients. Both metrics measure the strength and direction of the relationship between two variables. The correlation coefficient can range from -1 to 1, where a value close to 1 indicates a strong positive relationship, meaning that as one variable increases, the other does as well. A value close to 0 suggests no meaningful relationship, with the variables changing independently of each other. These metrics provide valuable insights into the connection between diversity and success.
+Claiming that the diversity score and a movie's success are correlated implies that the two variables tend to change together in a systematic way. To investigate this relationship, we use two key metrics: Pearson and Spearman correlation coefficients. Both metrics measure the strength and direction of the relationship between two variables. The correlation coefficient can range from -1 to 1, where a value close to 1 indicates a strong positive relationship, meaning that as one variable increases, the other does as well. A value close to 0 suggests no meaningful relationship, with the variables changing independently of each other. Pearson assumes a linear relation between two continuous variables normally distributed. Therefore, we decided to use Pearson for continuous variable (box office revenue and ratings) but not for binary variables like success and nominations. Instead we used Spearman. These metrics provide valuable insights into the connection between diversity and success.
 {: .text-justify}
 
 <div style="text-align: center; font-size: 80%; line-height: 1.2;">
