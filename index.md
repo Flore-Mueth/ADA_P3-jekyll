@@ -22,7 +22,7 @@ Today, even the Oscars have introduced diversity quotas for Best Picture eligibi
 
 ## Setting the Stage
 
-In this project, we will dive into the provided CMU Movie Summary Corpus Dataset containing 42'306 plot summaries and metadata for films released from 1893 to 2013. To define "success" we have expanded our resources, integrating data on award nominations and audience ratings. Since our focus is on cast diversity, we exclude all films with only one character, as they do not contribute meaningfully to the diversity analysis. Our final cleaned dataset comprises 13'000 films.
+In this project, we will dive into the provided CMU Movie Summary Corpus Dataset containing 42'306 plot summaries and metadata for films released from 1893 to 2013. To define "success" we have expanded our resources, integrating data on award nominations and audience ratings. Since our focus is on cast diversity, we exclude all films with only one character, as they do not contribute meaningfully to the diversity analysis. Our final cleaned dataset comprises 10'000 films.
 {: .text-justify}
 
 ### About Our Inspiring Datasets
@@ -104,22 +104,22 @@ Finally, to balance the limitations of both methods, we multiply the entropy val
 
 {% include diversity_histogram_essai.html %}
 
+{% include average_diversity_per_year.html %}
+
+Cool! Diversity in movie casts has been steadily increasing over time as mindsets evolve and inclusivity becomes a greater priority. But is this shift driven by success? Let’s dive deeper and find out…
+{: .text-justify}
+
 ### Reflecting on the Limitations of Our Definition
 
 Firstly, the dataset includes movies with varying numbers of actors. Films with only one actor cannot be included in the diversity calculation, as it would not provide meaningful insights into cast diversity. For a more comprehensive analysis, one could also consider whether an actor belongs to a minority group, adding another dimension to the evaluation.<br>
 Secondly, the diversity coefficient relies on the previously defined ethnic groups. Any changes to the characteristics of these groups—such as their size, number, or composition—will directly impact the diversity factor. This highlights the importance of consistent and well-defined groupings when conducting such analyses.
 {: .text-justify}
 
-{% include average_diversity_per_year.html %}
-
-Cool! Diversity in movie casts has been steadily increasing over time as mindsets evolve and inclusivity becomes a greater priority. But is this shift driven by success? Let’s dive deeper and find out…
-{: .text-justify}
-
 ## Movie Success Criteria
 
 {% include ingredients_of_success.html %}
 
-## The Cruel Truth of Data
+## The Truth of Data
 
 Let us now dive into the results of our data analysis and see how diversity aligns with the overall definition of success we established. Is cast diversity more prominent in successful movies, or do less successful films lead the way? Let’s uncover the patterns and insights hidden in the data.
 {: .text-justify}
@@ -219,21 +219,6 @@ meme de omar sy triste
 ## References
 
 <ul>
-    <li>
-        <a href="https://yes-we-are.fr/diversite-dans-le-cinema/#:~:text=Où%20en%20est%20la%20diversité,proportionnel%20à%20la%20population%20américaine" target="_blank">
-            Yes We Are. "Où en est la diversité dans le cinéma?" <i>Yes We Are</i>.
-        </a>
-    </li>
-    <li>
-        <a href="https://filmustage.com/blog/how-embracing-diversity-and-representation-is-transforming-filmmaking/" target="_blank">
-            Filmustage. "How Embracing Diversity and Representation Is Transforming Filmmaking." <i>Filmustage Blog</i>.
-        </a>
-    </li>
-    <li>
-        <a href="https://time.com/6305012/hollywood-diversity-report-asian-representation/" target="_blank">
-            Time. "Hollywood Diversity Report: Asian Representation." <i>Time</i>.
-        </a>
-    </li>
     <li>
         <a href="https://socialsciences.ucla.edu/wp-content/uploads/2024/06/UCLA-Hollywood-Diversity-Report-2024-Film-Streaming-5-23-2024.pdf" target="_blank">
             UCLA Social Sciences. <i>Hollywood Diversity Report 2024: Film and Streaming</i>.
