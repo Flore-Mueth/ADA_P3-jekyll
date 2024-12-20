@@ -144,7 +144,7 @@ Let us now dive into the results of our data analysis and see how diversity alig
     {% include diversity_success.html %}
 </div>
 
-The mean diversity score for successful movies is 2.54 and for less successful movies 2.29. The diversity score seems to be higher for successful movies. We can notice that the standard deviation on this plot is very important. This is due to the large number data we are working with.<br>
+The mean diversity score for successful movies is 2.54 and for less successful movies 2.29. The diversity score seems to be higher for successful movies. We can notice that the standard deviation on this plot is very important. This is due to the large number of data we are working with.<br>
 But is this difference truly significant? To determine this, we will perform a t-test, a statistical method used to compare the means of two groups and evaluate whether the observed differences are likely due to chance. In this case, we will compare the diversity scores of successful movies (using the overall success) versus less successful movies. This test will help us establish whether there is a statistically significant relationship. Let’s dive in!
 {: .text-justify}
 
@@ -238,7 +238,7 @@ This highlights a complex dynamic where diversity may influence ratings in speci
     {% include propensity_score_matching_ratings.html %}
 </div>
 
-The ATE is 0.11 out of ten, we can consider that the diversity of the cast doesn't have an effect on the ratings. Compared to the one we got for the box office revenue, it seems way more logical. It can be explained by the fact that the standard deviation is not very high in this case.
+The ATE is 0.11 out of ten, we can consider that the diversity of the cast doesn't have an effect on the ratings. Compared to the one we got for the box office revenue, it makes more sense. It can be explained by the fact that the standard deviation is not very high in this case.
 
 #### <span class="criteria-icon">🏆</span> Nominations
 
