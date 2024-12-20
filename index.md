@@ -100,7 +100,7 @@ When we first have a look at the ethnicities, we can see that there are a total 
 
 ### Diversity Score
 
-Once ethnicities have been categorized into larger groups (16 in total), we can begin defining diversity. Since the focus is on the diversity of the cast rather than the representation of minority groups, the country of production does not need to be taken into account.<br>
+Once ethnicities have been categorized into larger groups (18 in total), we can begin defining diversity. Since the focus is on the diversity of the cast rather than the representation of minority groups, the country of production does not need to be taken into account.<br>
 A straightforward way to calculate diversity is to divide the number of ethnicities represented by the number of actors in the cast. However, this method is limited. For instance, in a movie with nine actors and three ethnicities, this approach would assign the same diversity score to a distribution of ethnicities such as (3,3,3) and (1,1,7).<br>
 To refine this measure, we incorporate the concept of entropy. Entropy accounts for the distribution of ethnicities within a cast. The basic formula for entropy is:
 {: .text-justify}
@@ -259,7 +259,8 @@ The mean diversity score for movies nominated is 2.43 and for movies not nominat
     </div>
 </div>
 
-The difference in diversity scores between nominated and non-nominated films appears significant, with a test statistic of 2, indicating that films with more diverse casts are more likely to be nominated. However, consistent with our earlier findings, the correlation coefficient is nearly zero, suggesting that there is no strong or systematic relationship between diversity scores and nominations overall. This aligns with the pattern we've observed: while diversity may have an influence in certain cases, it does not establish a clear or consistent trend.
+The difference in diversity scores between nominated and non-nominated films appears significant, with a p-value of 0.042 (<0.05), indicating that films with more diverse casts are more nominated. However, consistent with our earlier findings, the correlation coefficient is nearly zero, suggesting that there is no strong or systematic relationship between diversity scores and nominations overall. This aligns with the pattern we've observed: while diversity may have an influence in certain cases, it does not establish a clear or consistent trend.<br>
+Most of our results appear significant but with small relations. That is very typical from analysis with large dataset: even small effect can become significant.
 {: .text-justify}
 
 ## Conclusion
