@@ -217,11 +217,12 @@ Therefore, when focusing solely on the effect of diversity on box office success
 The mean diversity score for movies with high ratings is 2.2 and for movies with low ratings 2.4. The diversity score seems to be lower for high rated movies... Disappointing... But is this difference really significant? Let’s conduct a t-test and pearson correlation:
 {: .text-justify}
 
-<div class="side-by-side">
-    <div>
+<div style="display: flex; justify-content: space-around; align-items: flex-start; gap: 20px;">
+    <div style="text-align: center; font-size: 80%; line-height: 1.2;">
         {% include t_test_Ratings.html %}
     </div>
-    <div>
+
+    <div style="text-align: center; font-size: 80%; line-height: 1.2;">
         {% include corr_Ratings_Pearson.html %}
     </div>
 </div>
@@ -239,11 +240,12 @@ This highlights a complex dynamic where diversity may influence ratings in speci
 The mean diversity score for movies nominated is 2.43 and for movies not nominated 2.36. Unlike ratings, nominations appear to favor more diverse casts, though the difference is minor. Let's see:
 {: .text-justify}
 
-<div class="side-by-side">
-    <div>
+<div style="display: flex; justify-content: space-around; align-items: flex-start; gap: 20px;">
+    <div style="text-align: center; font-size: 80%; line-height: 1.2;">
         {% include t_test_Nomination.html %}
     </div>
-    <div>
+
+    <div style="text-align: center; font-size: 80%; line-height: 1.2;">
         {% include corr_Nomination_Spearman.html %}
     </div>
 </div>
