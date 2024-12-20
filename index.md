@@ -186,12 +186,14 @@ Recall: For this part of the story the dataset is reduced to films where box off
 The mean diversity score for movies with high box revenue is 3.21 and for lower box office revenue 2.75. Here again diversity appears higher for films with higher box office revenue. Is this difference significant? Let’s investigate:
 {: .text-justify}
 
-<div style="text-align: center; font-size: 80%; line-height: 1.2;">
-    {% include t_test_Box_office_revenue.html %}
-</div>
+<div style="display: flex; justify-content: space-around; align-items: flex-start; gap: 20px;">
+    <div style="text-align: center; font-size: 80%; line-height: 1.2;">
+        {% include t_test_Box_office_revenue.html %}
+    </div>
 
-<div style="text-align: center; font-size: 80%; line-height: 1.2;">
-    {% include corr_Movie_box_office_revenue_Pearson.html %}
+    <div style="text-align: center; font-size: 80%; line-height: 1.2;">
+        {% include corr_Movie_box_office_revenue_Pearson.html %}
+    </div>
 </div>
 
 For the t-test, with a significance threshold of 0.05, the p-value reveals that the difference in diversity scores between the two groups is statistically significant. For pearson, the value is very close to 0 indicating that the two variables are not correlated. This result brings the same conclusion about the role of diversity in this context, there is a small (0.149), but significant (p < 0.05) positive correlation between box office revenue and diversity score.
