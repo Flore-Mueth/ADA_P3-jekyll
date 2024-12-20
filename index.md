@@ -214,7 +214,9 @@ The difference in diversity scores between nominated and non-nominated films app
 <img src="assets/img/omar_sy_triste.gif" alt=""/>
 </p>
 
-meme de omar sy triste 
+The relationship between cast diversity and movie success paints a complex picture. Films with more diverse casts often shine at the box office and during awards season, as nominations appear linked to higher diversity. However, high ratings tend to favor less diverse casts, and overall, correlation coefficients reveal no strong or consistent link between diversity and success metrics.
+This suggests that directors may not be easily convinced to prioritize diversity, as its impact on a film’s success isn’t direct or significant. But Hollywood, take note: even if diversity isn’t the guaranteed star of the show, the industry still has work to do to ensure diversity becomes a more prominent and lasting part of the narrative.
+{: .text-justify}
 
 ## References
 

@@ -23,6 +23,7 @@ navbar-links:
   About Us: "aboutme"
   Resources:
     - The Dataset: "https://www.cs.cmu.edu/~ark/personas/"
+    - Github: "https://github.com/epfl-ada/ada-2024-project-inspiration"
 
 ################
 # --- Logo --- #
