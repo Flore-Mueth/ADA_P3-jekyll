@@ -63,7 +63,7 @@ In this project, we will dive into the provided CMU Movie Summary Corpus Dataset
     </div>
 </div>
 
-<div style="text-align: center; font-size: 50%; line-height: 1;">
+<div style="text-align: center; font-size: 20%; line-height: 1; display: inline-block;">
     {% include distribution_realease_date.html %}
 </div>
 
