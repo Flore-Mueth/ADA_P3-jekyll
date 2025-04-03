@@ -1,13 +1,8 @@
 ---
 layout: page
 title: About me
-subtitle: Meet the Inspiration Team
+subtitle: Design Project : Accessibilité des zones forestières en cas d'incendie
 ---
 
-Here are its inspiring members:
-
-- Albane Sautier
-- Berend Slager
-- Francesco Saint-Supéry
 - Flore Mueth
-- Mathilde Ballot
+- Cléa Schieber
